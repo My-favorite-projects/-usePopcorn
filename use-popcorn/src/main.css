@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: fontFamilyBold;
-  src: url(../public/static/DMSans-Bold.ttf);
+  src: url(./static/DMSans-Bold.ttf);
 }
 
 @font-face {
   font-family: fontFamilyMedium;
-  src: url(../public/static/DMSans-Medium.ttf);
+  src: url(./static/DMSans-Medium.ttf);
 }
 
 @font-face {
   font-family: fontFamilyRegular;
-  src: url(../public/static/DMSans-Regular.ttf);
+  src: url(./static/DMSans-Regular.ttf);
 }
 
 .ffb {
