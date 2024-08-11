@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import LandingPage from "./assets/ComponentsPage/LandingPage/LandingPage";
+import LandingPage from "./ComponentsPage/LandingPage/LandingPage";
 import "./main.css";
 
 createRoot(document.getElementById("root")!).render(
