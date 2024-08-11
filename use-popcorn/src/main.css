@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: fontFamilyBold;
+  src: url(../public/static/DMSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: fontFamilyMedium;
+  src: url(../public/static/DMSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: fontFamilyRegular;
+  src: url(../public/static/DMSans-Regular.ttf);
+}
+
+.ffb {
+  font-family: fontFamilyBold !important;
+}
+
+.ffm {
+  font-family: fontFamilyMedium !important;
+}
+
+.ffr {
+  font-family: fontFamilyRegular !important;
+}
