@@ -1,24 +1,19 @@
 import { Box, Typography, IconButton, InputBase, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-// interface Param {
-//   bg: string;
-// }
-
 export default function Header(props: any) {
-  console.log(props.bg);
-
   return (
     <>
       <Box
-        className={`flex justify-between py-3 bg-${props.bg ? props.bg : null}`}
+        className="flex justify-between py-3"
+        sx={{ backgroundColor: props.bg ? props.bg : null }}
       >
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
           <Button>
             <Typography
               variant="h4"
-              className={`ffb ${props.bg ? "text-light" : "text-dark"}`}
+              className={`ffb ${props.bg ? "text-secondary" : "text-dark"}`}
             >
               MovieBox
             </Typography>
@@ -27,10 +22,14 @@ export default function Header(props: any) {
 
         <Box className="border border-2 rounded-md w-2/5 flex items-center">
           <InputBase
-            sx={{ ml: 1, flex: 1 }}
+            sx={{
+              ml: 1,
+              flex: 1,
+              color: props.bg ? "white" : "black",
+            }}
             placeholder="What do you want to watch?"
             inputProps={{ "aria-label": "What do you want to watch?" }}
-            className="w-full ffb text-8xl"
+            className={`w-full ffb text-8xl`}
           />
           <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
             <SearchIcon />
