@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 export default function IMDb(props: any) {
   return (
-    <Box className="flex justify-between w-64 ">
+    <Box className="flex justify-between w-64 mb-4">
       <Box className="flex justify-between w-28  items-center ">
         <Box sx={{ background: "#E6B91E" }} className="rounded">
           <Typography

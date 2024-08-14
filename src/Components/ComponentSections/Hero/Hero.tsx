@@ -1,20 +1,23 @@
-import { Container, Typography, Button } from "@mui/material";
-import ScoreMovie from "../../ComponentsElement/scoreMovie.tsx";
+import { Container, Typography, Button, Box } from "@mui/material";
+import ScoreMovie from "../../ComponentsElement/ScoreMovie.tsx";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 export default function Hero() {
   return (
-    <Container className="w-11/12 m-auto">
-      <Typography variant="h3" className="ffb text-light">
-        John Wick 3 :
-      </Typography>
+    <Container className="w-11/12 m-auto py-32">
+      <Box className="pb-4">
+        <Typography variant="h3" className="ffb text-light">
+          John Wick 3 :
+        </Typography>
 
-      <Typography variant="h3" className="ffb text-light">
-        Parabellum
-      </Typography>
+        <Typography variant="h3" className="ffb text-light">
+          Parabellum
+        </Typography>
+      </Box>
+
       <ScoreMovie size="14" score="30" colorScore="light" percentage="97" />
 
-      <Typography variant="body2" className="text-light w-80">
+      <Typography variant="body2" className="text-light w-80 pb-4">
         John Wick is on the run after killing a member of the international
         assassins' guild, and with a $14 million price tag on his head, he is
         the target of hit men and women everywhere.
