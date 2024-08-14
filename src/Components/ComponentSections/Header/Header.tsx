@@ -1,20 +1,14 @@
 import { Box, Typography, IconButton, InputBase, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function Header(props: any) {
+export default function Header() {
   return (
     <>
-      <Box
-        className="flex justify-between py-3"
-        sx={{ backgroundColor: props.bg ? props.bg : null }}
-      >
+      <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
           <Button>
-            <Typography
-              variant="h4"
-              className={`ffb ${props.bg ? "text-secondary" : "text-dark"}`}
-            >
+            <Typography variant="h4" className="ffb text-light">
               MovieBox
             </Typography>
           </Button>
@@ -25,14 +19,14 @@ export default function Header(props: any) {
             sx={{
               ml: 1,
               flex: 1,
-              color: props.bg ? "white" : "black",
+              color: "white",
             }}
             placeholder="What do you want to watch?"
             inputProps={{ "aria-label": "What do you want to watch?" }}
-            className={`w-full ffb text-8xl`}
+            className="w-full ffb text-8xl text-light"
           />
           <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-            <SearchIcon />
+            <SearchIcon sx={{ color: "white" }} />
           </IconButton>
         </Box>
 
@@ -40,12 +34,9 @@ export default function Header(props: any) {
           <Button
             variant="text"
             size="small"
-            sx={{ border: 2, borderColor: props.bg ? "white" : "black" }}
+            sx={{ border: 2, borderColor: "white" }}
           >
-            <Typography
-              variant="h5"
-              className={`ffb ${props.bg ? "text-secondary" : "text-dark"}`}
-            >
+            <Typography variant="h5" className="ffb text-light">
               Movie List
             </Typography>
           </Button>

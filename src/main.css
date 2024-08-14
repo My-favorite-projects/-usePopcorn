@@ -28,3 +28,8 @@
 .ffr {
   font-family: fontFamilyRegular !important;
 }
+
+.bg-hero {
+  background-image: url(./public/images/Poster.png);
+  background-size: cover;
+}
