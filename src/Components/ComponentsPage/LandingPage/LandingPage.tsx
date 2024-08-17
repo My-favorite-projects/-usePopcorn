@@ -3,6 +3,7 @@ import Header from "../../ComponentSections/Header/Header";
 import Hero from "../../ComponentSections/Hero/Hero";
 import Card from "../../ComponentsElement/Card";
 import Slider from "../../ComponentSections/Slider/Slider";
+import Footer from "../../ComponentSections/Footer/Footer";
 
 export default function LandingPage(props: any) {
   return (
@@ -15,6 +16,7 @@ export default function LandingPage(props: any) {
         {/* <Card /> */}
 
         <Slider />
+        <Footer />
       </Container>
     </>
   );
