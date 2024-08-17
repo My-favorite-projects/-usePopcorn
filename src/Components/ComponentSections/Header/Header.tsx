@@ -37,7 +37,7 @@ export default function Header() {
             sx={{ border: 2, borderColor: "white" }}
           >
             <Typography variant="h5" className="ffb text-light">
-              Movie List
+              Watch List
             </Typography>
           </Button>
         </Box>
