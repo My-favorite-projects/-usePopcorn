@@ -8,7 +8,7 @@ export default function IMDb(props: any) {
           <Typography
             variant="h6"
             sx={{ fontSize: `${props.size}px` }}
-            className="text-dark ffb text-dark p-0.5 py-0.1"
+            className="text-dark ffb  p-0.5 py-0.1"
           >
             IMDb
           </Typography>

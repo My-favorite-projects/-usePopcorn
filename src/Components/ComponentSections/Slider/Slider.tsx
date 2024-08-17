@@ -11,13 +11,10 @@ export default function Slider(params: any) {
   params;
   return (
     <>
-      <Box className={`w-11/12 m-auto`}>
+      <Box className={`w-11/12 m-auto mb-10`}>
         <Swiper
           spaceBetween={10}
           slidesPerView={3}
-          pagination={{
-            type: "fraction",
-          }}
           breakpoints={{
             640: {
               slidesPerView: 2,
