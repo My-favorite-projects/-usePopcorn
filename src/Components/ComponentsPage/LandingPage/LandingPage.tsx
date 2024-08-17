@@ -6,8 +6,8 @@ import Card from "../../ComponentsElement/Card";
 export default function LandingPage(props: any) {
   return (
     <>
-      <Container>
-        <Box className="bg-hero">
+      <Container className="min-w-full p-0">
+        <Box className="bg-hero w-full">
           <Header />
           <Hero />
         </Box>
