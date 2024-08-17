@@ -4,7 +4,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 export default function Hero() {
   return (
-    <Container className="w-11/12 m-auto py-32">
+    <Container className="min-w-full py-32">
       <Box className="pb-4">
         <Typography variant="h3" className="ffb text-light">
           John Wick 3 :
@@ -23,7 +23,11 @@ export default function Hero() {
         the target of hit men and women everywhere.
       </Typography>
 
-      <Button variant="contained" sx={{ background: "#BE123C" }}>
+      <Button
+        variant="contained"
+        className="hoverBTN"
+        sx={{ background: "#BE123C" }}
+      >
         <PlayCircleIcon className="mr-2" />
         <Typography className="text-light ffb" variant="h6">
           Watch trailer

@@ -33,3 +33,7 @@
   background-image: url(./public/images/Poster.png);
   background-size: cover;
 }
+
+.hoverBTN:hover {
+  background-color: #9f1239 !important;
+}
