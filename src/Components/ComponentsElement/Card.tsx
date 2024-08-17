@@ -6,8 +6,8 @@ export default function Card() {
     <div>
       <Box
         sx={{
-          width: 250,
-          height: 490,
+          width: "100%",
+          height: "100%",
           bgcolor: "#fff",
         }}
       >
