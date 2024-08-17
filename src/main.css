@@ -37,3 +37,12 @@
 .hoverBTN:hover {
   background-color: #9f1239 !important;
 }
+
+img {
+  user-select: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
