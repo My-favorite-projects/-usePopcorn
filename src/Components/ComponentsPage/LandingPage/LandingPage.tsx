@@ -19,7 +19,6 @@ export default function LandingPage(props: any) {
 
         <Footer />
       </Container>
-      {/* <StarScore lengthStar={3} /> */}
     </>
   );
 }
