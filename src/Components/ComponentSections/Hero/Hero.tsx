@@ -4,7 +4,10 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 export default function Hero() {
   return (
-    <Container className="min-w-full py-32 mb-10">
+    <Container
+      className="w-1/12 py-32 mb-10"
+      sx={{ marginLeft: "4%", marginRight: "0" }}
+    >
       <Box className="pb-4">
         <Typography variant="h3" className="ffb text-light">
           John Wick 3 :
