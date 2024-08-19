@@ -1,5 +1,4 @@
 import { Container, Button, Typography, Box } from "@mui/material";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import Header from "../../ComponentSections/Header/Header";
 import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/TextValueCardDetails";
 import StarScore from "../../ComponentsElement/StarScore";
@@ -29,27 +28,15 @@ export default function CardDetails(props: any) {
             <StarScore lengthStar={4} />
           </Box>
 
-          <Box>
-            <Button
-              variant="contained"
-              sx={{ background: "#BE123C", marginRight: "16px" }}
-            >
-              <PlayCircleIcon className="mr-2" />
-              <Typography className="text-light ffb" variant="h6">
-                Watch Now
-              </Typography>
-            </Button>
-
-            <Button
-              variant="outlined"
-              className="hoverBTN"
-              sx={{ border: "1px solid white" }}
-            >
-              <Typography className="text-light ffb" variant="h6">
-                Trailer
-              </Typography>
-            </Button>
-          </Box>
+          <Button
+            variant="contained"
+            className="hoverBTN"
+            sx={{ background: "#BE123C" }}
+          >
+            <Typography className="text-light ffb" variant="h6">
+              add to watch list
+            </Typography>
+          </Button>
         </Box>
       </Container>
     </>
