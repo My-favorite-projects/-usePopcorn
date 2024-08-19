@@ -9,22 +9,22 @@ import "swiper/css/navigation";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function Slider(params: any) {
+export default function Slider({ sliderId }) {
   return (
     <>
       <Box className={`w-11/12 m-auto mb-10 relative`}>
-        <div
-          id="swiper-prev"
+        <Box
+          id={`swiper-prev-${sliderId}`}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 mx-4 l left-prev cursor-pointer text-secondary"
         >
           <ArrowBackIosNewIcon />
-        </div>
-        <div
-          id="swiper-next"
+        </Box>
+        <Box
+          id={`swiper-next-${sliderId}`}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 right-next cursor-pointer text-secondary"
         >
           <ArrowForwardIosIcon />
-        </div>
+        </Box>
 
         <Swiper
           spaceBetween={10}
@@ -46,8 +46,8 @@ export default function Slider(params: any) {
           modules={[Pagination, Navigation]}
           className="mySwiper"
           navigation={{
-            prevEl: "#swiper-prev",
-            nextEl: "#swiper-next",
+            prevEl: `#swiper-prev-${sliderId}`,
+            nextEl: `#swiper-next-${sliderId}`,
           }}
         >
           <SwiperSlide>
