@@ -1,7 +1,7 @@
 import { Box, Typography, IconButton, InputBase, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function Header() {
+export default function Header({ setIsOpen }) {
   return (
     <header>
       <Box className="flex justify-between w-11/12 m-auto py-3">
@@ -35,6 +35,7 @@ export default function Header() {
             variant="text"
             size="small"
             sx={{ border: 2, borderColor: "white" }}
+            onClick={() => setIsOpen(true)}
           >
             <Typography variant="h5" className="ffb text-light">
               Watch List

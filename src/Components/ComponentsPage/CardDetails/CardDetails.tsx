@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { Container, Button, Typography, Box } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
 import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/TextValueCardDetails";
 import StarScore from "../../ComponentsElement/StarScore";
+import WatchListDrawer from "../../ComponentsElement/WatchList";
 import { Margin } from "@mui/icons-material";
 
 export default function CardDetails(props: any) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Container
@@ -15,7 +19,8 @@ export default function CardDetails(props: any) {
           backgroundPosition: "center",
         }}
       >
-        <Header />
+        <Header setIsOpen={setIsOpen} />
+        <WatchListDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
         <Box className="flex flex-col pl-14 mt-10 w-96">
           <Box className="mb-4">
             <TextValueCardDetails
