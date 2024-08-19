@@ -2,12 +2,12 @@ import { Box, Typography } from "@mui/material";
 
 export default function IMDb(props: any) {
   return (
-    <Box className="flex justify-between w-64 mb-4">
-      <Box className="flex justify-between w-28  items-center ">
+    <Box className="flex justify-between w-64">
+      <Box className="flex justify-between w-28 items-center ">
         <Box sx={{ background: "#E6B91E" }} className="rounded">
           <Typography
             variant="h6"
-            sx={{ fontSize: `${props.size}px` }}
+            sx={{ fontSize: `${props.size}px`, fontWeight: `${props.weight}` }}
             className="text-dark ffb  p-0.5 py-0.1"
           >
             IMDb

@@ -1,10 +1,12 @@
 import CardMedia from "@mui/material/CardMedia";
 import { Box, Typography } from "@mui/material";
+import IMDb from "./ScoreMovie";
 
 export default function Card() {
   return (
     <div>
       <Box
+        className="text-secondary"
         sx={{
           width: "100%",
           height: "100%",
@@ -14,12 +16,29 @@ export default function Card() {
         <CardMedia
           component="img"
           height="370"
-          width="250"
           image="./public/images/Poster.svg"
           alt="stranger things"
         />
-        <Typography variant="span" component="h">
+        <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="subtitle1">
           USA, 2016 - Current
+        </Typography>
+        <Typography
+          className="text-dark"
+          sx={{ fontSize: 18, fontWeight: 600 }}
+          variant="h5"
+          component="text"
+        >
+          USA, 2016 - Current
+        </Typography>
+        <IMDb
+          colorScore="dark"
+          percentage="97"
+          score="88"
+          size="12"
+          weight="800"
+        />
+        <Typography variant="h6" sx={{ fontSize: 12, fontWeight: 600 }}>
+          Action, Adventure, Horror
         </Typography>
       </Box>
     </div>
