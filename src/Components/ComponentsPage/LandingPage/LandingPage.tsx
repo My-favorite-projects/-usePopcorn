@@ -13,9 +13,9 @@ export default function LandingPage(props: any) {
           <Header />
           <Hero />
         </Box>
-        {/* <Card /> */}
+        <Card />
 
-        <Slider />
+        {/* <Slider /> */}
         <Footer />
       </Container>
     </>

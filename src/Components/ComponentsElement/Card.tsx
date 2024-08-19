@@ -18,7 +18,7 @@ export default function Card() {
         image="./public/images/Poster.svg"
         alt="stranger things"
       />
-      <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="subtitle1">
+      <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="h6">
         USA, 2016 - Current
       </Typography>
       <Typography
