@@ -1,6 +1,5 @@
 import { Container, Typography, Button, Box } from "@mui/material";
 import ScoreMovie from "../../ComponentsElement/ScoreMovie.tsx";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 export default function Hero() {
   return (
@@ -18,7 +17,9 @@ export default function Hero() {
         </Typography>
       </Box>
 
-      <ScoreMovie size="14" score="30" colorScore="light" percentage="97" />
+      <Box className="w-3/12">
+        <ScoreMovie size="14" score="30" colorScore="light" percentage="97" />
+      </Box>
 
       <Typography variant="body2" className="text-light w-80 pb-4">
         John Wick is on the run after killing a member of the international
@@ -31,9 +32,8 @@ export default function Hero() {
         className="hoverBTN"
         sx={{ background: "#BE123C" }}
       >
-        <PlayCircleIcon className="mr-2" />
         <Typography className="text-light ffb" variant="h6">
-          Watch trailer
+          add to watch list
         </Typography>
       </Button>
     </Container>
