@@ -25,7 +25,6 @@ export default function Card() {
         className="text-dark"
         sx={{ fontSize: 18, fontWeight: 600 }}
         variant="h5"
-        component="text"
       >
         USA, 2016 - Current
       </Typography>
