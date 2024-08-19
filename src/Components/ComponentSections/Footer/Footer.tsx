@@ -6,7 +6,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 export default function Footer() {
   return (
-    <>
+    <footer>
       <Container className="text-center">
         <Box className="flex justify-between w-2/5 m-auto mb-4">
           <FacebookIcon />
@@ -27,6 +27,6 @@ export default function Footer() {
           </Typography>
         </Box>
       </Container>
-    </>
+    </footer>
   );
 }

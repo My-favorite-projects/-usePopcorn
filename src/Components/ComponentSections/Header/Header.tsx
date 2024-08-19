@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
   return (
-    <>
+    <header>
       <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
@@ -42,6 +42,6 @@ export default function Header() {
           </Button>
         </Box>
       </Box>
-    </>
+    </header>
   );
 }
