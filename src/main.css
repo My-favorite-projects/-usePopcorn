@@ -43,7 +43,10 @@ img {
   user-select: none;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: white;
+.right-next {
+  right: -40px;
+}
+
+.left-prev {
+  left: -53px;
 }
