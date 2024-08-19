@@ -13,19 +13,9 @@ export default function LandingPage(props: any) {
         <Hero />
       </Box>
       <Container className="min-w-full p-0">
-<<<<<<< HEAD
-        <Box className="bg-hero w-full">
-          <Header />
-          <Hero />
-        </Box>
-
-        <Slider />
-
-=======
         <Slider />
         <Slider />
 
->>>>>>> 7c9e84a15adb4fe5d8a690be4000d90ad431ddff
         <Footer />
       </Container>
     </>
