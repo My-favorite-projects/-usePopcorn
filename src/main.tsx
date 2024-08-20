@@ -8,6 +8,6 @@ import "./main.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <LandingPage />
-    <CardDetails />
+    {/* <CardDetails /> */}
   </StrictMode>
 );
