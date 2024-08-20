@@ -7,7 +7,7 @@ import Footer from "../../ComponentSections/Footer/Footer";
 import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 
-export default function LandingPage(props: any) {
+export default function LandingPage({ setCardDetails }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,8 +18,8 @@ export default function LandingPage(props: any) {
         <Hero />
       </Box>
       <Container className="min-w-full p-0">
-        <Slider sliderId="2" />
-        <Slider sliderId="1" />
+        <Slider sliderId="2" showCardDetails={setCardDetails} />
+        <Slider sliderId="1" showCardDetails={setCardDetails} />
         <Footer />
       </Container>
     </>

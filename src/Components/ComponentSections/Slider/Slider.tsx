@@ -9,7 +9,19 @@ import "swiper/css/navigation";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function Slider({ sliderId }) {
+export default function Slider({ sliderId, showCardDetails }: any) {
+  function asd(e: any) {
+    let [img, tit, desc] = e.target.parentElement.children;
+
+    const infoCard = {
+      img: img.src,
+      tit: tit.textContent,
+      desc: desc.textContent,
+    };
+
+    showCardDetails(infoCard);
+  }
+
   return (
     <>
       <Box className={`w-11/12 m-auto mb-10 relative`}>
@@ -50,34 +62,7 @@ export default function Slider({ sliderId }) {
             nextEl: `#swiper-next-${sliderId}`,
           }}
         >
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={asd}>
             <Card />
           </SwiperSlide>
         </Swiper>
