@@ -1,13 +1,13 @@
 import { Box, Typography, IconButton, InputBase, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function Header({ setIsOpen }) {
+export default function Header({ setIsOpen, showCardDetails }: any) {
   return (
     <header>
       <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
-          <Button>
+          <Button onClick={() => showCardDetails(null)}>
             <Typography variant="h4" className="ffb text-light">
               MovieBox
             </Typography>
