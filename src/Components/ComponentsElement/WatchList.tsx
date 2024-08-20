@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Drawer,
   List,
@@ -10,21 +11,15 @@ import {
 } from "@mui/material";
 import StarScore from "./StarScore";
 
-export default function WatchListDrawer({
-  isOpen,
-  setIsOpen,
-  isMovieSelected = true,
-}) {
+export default function WatchListDrawer({ isOpen, setIsOpen }) {
+  const [movieList, setMovieList] = useState([]);
+
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
       <List className="flex-col" sx={{ width: 600, gap: 1 }}>
-        {isMovieSelected ? (
-          [
-            "Attack on titan",
-            "Avengers: End game",
-            "John Wick 3: Parabellum",
-          ].map((detail) => (
-            <ListItem className="flex justify-between w-full">
+        {movieList.length > 0 ? (
+          movieList.map((detail) => (
+            <ListItem key={detail} className="flex justify-between w-full">
               <Box className="flex w-full justify-between">
                 <Box className="flex gap-3">
                   <CardMedia
@@ -77,6 +72,7 @@ export default function WatchListDrawer({
             />
           </ListItem>
         )}
+        <Button className="btn">click</Button>
       </List>
     </Drawer>
   );

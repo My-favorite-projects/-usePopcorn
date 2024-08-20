@@ -4,7 +4,6 @@ import Header from "../../ComponentSections/Header/Header";
 import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/TextValueCardDetails";
 import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
-import { Margin } from "@mui/icons-material";
 
 export default function CardDetails({ setCardDetails, cardDetails }: any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +34,7 @@ export default function CardDetails({ setCardDetails, cardDetails }: any) {
             variant="contained"
             className="hoverBTN"
             sx={{ background: "#BE123C" }}
+            onClick={() => console.log("mahsa")}
           >
             <Typography className="text-light ffb" variant="h6">
               add to watch list
