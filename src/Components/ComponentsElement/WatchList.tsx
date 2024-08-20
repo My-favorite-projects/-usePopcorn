@@ -8,6 +8,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import StarScore from "./StarScore";
 
 export default function WatchListDrawer({
   isOpen,
@@ -23,37 +24,48 @@ export default function WatchListDrawer({
             "Avengers: End game",
             "John Wick 3: Parabellum",
           ].map((detail) => (
-            <ListItem className="flex  justify-between">
-              <Box className="flex gap-3 w-full">
-                <CardMedia
-                  sx={{ width: 50 }}
-                  component="img"
-                  image="./public/images/Poster.svg"
-                  alt="stranger things"
-                />
-                <Box>
-                  {/* for title */}
-                  <Typography
-                    className="font-bold"
-                    sx={{ fontWeight: 600, fontSize: 18 }}
-                    variant="h6"
-                  >
-                    {detail}
-                  </Typography>
-                  {/* for description */}
-                  <Typography
-                    className="font-bold"
-                    sx={{ fontWeight: 400, fontSize: 14 }}
-                    variant="h6"
-                  >
-                    {detail}
-                  </Typography>
+            <ListItem className="flex justify-between w-full">
+              <Box className="flex w-full justify-between">
+                <Box className="flex gap-3">
+                  <CardMedia
+                    sx={{ width: 50 }}
+                    component="img"
+                    image="./public/images/Poster.svg"
+                    alt="stranger things"
+                  />
+                  <Box>
+                    {/* for title */}
+                    <Typography
+                      className="font-bold"
+                      sx={{ fontWeight: 600, fontSize: 18 }}
+                      variant="h6"
+                    >
+                      {detail}
+                    </Typography>
+                    {/* for description */}
+                    <Typography
+                      className="font-bold"
+                      sx={{ fontWeight: 400, fontSize: 14 }}
+                      variant="h6"
+                    >
+                      {detail}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
-              <Box>
-                <Button sx={{ bgcolor: "#BE123C" }} variant="contained">
-                  Watch
-                </Button>
+                <Box className="flex flex-col items-end">
+                  <Button
+                    sx={{
+                      bgcolor: "#BE123C",
+                      ":hover": {
+                        bgcolor: "#9f1239",
+                      },
+                    }}
+                    variant="contained"
+                  >
+                    Watch
+                  </Button>
+                  <StarScore lengthStar={4} />
+                </Box>
               </Box>
             </ListItem>
           ))
