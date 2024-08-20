@@ -19,14 +19,14 @@ export default function Card() {
         alt="stranger things"
       />
       <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="h6">
-        USA, 2016 - Current
+        Title
       </Typography>
       <Typography
         className="text-dark"
         sx={{ fontSize: 18, fontWeight: 600 }}
         variant="h5"
       >
-        USA, 2016 - Current
+        Description
       </Typography>
       <IMDb
         colorScore="dark"
