@@ -17,6 +17,7 @@ export default function Card() {
         height="370"
         image="./public/images/Poster.svg"
         alt="stranger things"
+        className="cursor-pointer"
       />
       <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="h6">
         Title
