@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import StarScore from "./StarScore";
 
-export default function WatchListDrawer({ isOpen, setIsOpen }) {
+export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
   const [movieList, setMovieList] = useState([]);
 
   return (
