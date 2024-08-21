@@ -14,8 +14,12 @@ export default function CardDetails({
 }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const { img, tit, desc } = cardDetails;
+  const [clicked, setClicked] = useState(false);
 
   function addCardToWatchList() {
+    if (clicked) {
+      return;
+    }
     const info = {
       img: img,
       tit: tit,
@@ -24,6 +28,7 @@ export default function CardDetails({
     };
 
     setMovieList([...movieList, info]);
+    setClicked(true);
   }
 
   return (
@@ -57,9 +62,15 @@ export default function CardDetails({
             sx={{ background: "#BE123C" }}
             onClick={addCardToWatchList}
           >
-            <Typography className="text-light ffb" variant="h6">
-              add to watch list
-            </Typography>
+            {clicked ? (
+              <Typography className="text-light ffb" variant="h6">
+                Watch
+              </Typography>
+            ) : (
+              <Typography className="text-light ffb" variant="h6">
+                add to watch list
+              </Typography>
+            )}
           </Button>
         </Box>
       </Container>
