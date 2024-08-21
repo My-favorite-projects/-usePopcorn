@@ -37,7 +37,11 @@ export default function CardDetails({
         }}
       >
         <Header setIsOpen={setIsOpen} showCardDetails={setCardDetails} />
-        <WatchListDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
+        <WatchListDrawer
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          movieList={movieList}
+        />
         <Box className="flex flex-col pl-14 mt-10 w-96">
           <Box className="mb-4">
             <TextValueCardDetails movieName={tit} movieDesc={desc} />
