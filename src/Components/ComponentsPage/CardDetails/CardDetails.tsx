@@ -5,9 +5,26 @@ import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/T
 import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 
-export default function CardDetails({ setCardDetails, cardDetails }: any) {
+export default function CardDetails({
+  setCardDetails,
+  cardDetails,
+  setMovieList,
+  score = 3,
+  movieList,
+}: any) {
   const [isOpen, setIsOpen] = useState(false);
   const { img, tit, desc } = cardDetails;
+
+  function addCardToWatchList() {
+    const info = {
+      img: img,
+      tit: tit,
+      desc: desc,
+      score: score,
+    };
+
+    setMovieList([...movieList, info]);
+  }
 
   return (
     <>
@@ -27,14 +44,14 @@ export default function CardDetails({ setCardDetails, cardDetails }: any) {
           </Box>
 
           <Box className="mb-4">
-            <StarScore lengthStar={4} />
+            <StarScore lengthStar={score} />
           </Box>
 
           <Button
             variant="contained"
             className="hoverBTN"
             sx={{ background: "#BE123C" }}
-            onClick={() => console.log("mahsa")}
+            onClick={addCardToWatchList}
           >
             <Typography className="text-light ffb" variant="h6">
               add to watch list

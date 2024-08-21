@@ -1,1 +1,3 @@
-export default function AddToWatchList({ props }: any) {}
+export default function AddToWatchList({ props }: any) {
+  return <></>;
+}

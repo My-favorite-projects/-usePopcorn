@@ -4,6 +4,7 @@ import CardDetails from "./Components/ComponentsPage/CardDetails/CardDetails";
 
 export default function App() {
   const [cardDetails, setCardDetails] = useState(null);
+  const [movieList, setMovieList] = useState([]);
 
   return (
     <>
@@ -11,9 +12,11 @@ export default function App() {
         <CardDetails
           setCardDetails={setCardDetails}
           cardDetails={cardDetails}
+          setMovieList={setMovieList}
+          movieList={movieList}
         />
       ) : (
-        <LandingPage setCardDetails={setCardDetails} />
+        <LandingPage setCardDetails={setCardDetails} movieList={movieList} />
       )}
     </>
   );

@@ -11,21 +11,21 @@ import {
 } from "@mui/material";
 import StarScore from "./StarScore";
 
-export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
-  const [movieList, setMovieList] = useState([]);
+export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
+  console.log(movieList);
 
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
       <List className="flex-col" sx={{ width: 600, gap: 1 }}>
-        {movieList.length > 0 ? (
-          movieList.map((detail) => (
+        {movieList ? (
+          movieList.map((detail: any) => (
             <ListItem key={detail} className="flex justify-between w-full">
               <Box className="flex w-full justify-between">
                 <Box className="flex gap-3">
                   <CardMedia
                     sx={{ width: 50 }}
                     component="img"
-                    image="./public/images/Poster.svg"
+                    image={detail.img}
                     alt="stranger things"
                   />
                   <Box>
@@ -35,7 +35,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
                       sx={{ fontWeight: 600, fontSize: 18 }}
                       variant="h6"
                     >
-                      {detail}
+                      {detail.tit}
                     </Typography>
                     {/* for description */}
                     <Typography
@@ -43,7 +43,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
                       sx={{ fontWeight: 400, fontSize: 14 }}
                       variant="h6"
                     >
-                      {detail}
+                      {detail.desc}
                     </Typography>
                   </Box>
                 </Box>
@@ -59,7 +59,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
                   >
                     Watch
                   </Button>
-                  <StarScore lengthStar={4} />
+                  <StarScore lengthStar={detail.score} />
                 </Box>
               </Box>
             </ListItem>
@@ -72,7 +72,6 @@ export default function WatchListDrawer({ isOpen, setIsOpen }: any) {
             />
           </ListItem>
         )}
-        <Button className="btn">click</Button>
       </List>
     </Drawer>
   );
