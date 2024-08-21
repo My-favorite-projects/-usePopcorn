@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Drawer,
   List,
@@ -12,12 +11,10 @@ import {
 import StarScore from "./StarScore";
 
 export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
-  console.log(movieList);
-
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
       <List className="flex-col" sx={{ width: 600, gap: 1 }}>
-        {movieList ? (
+        {movieList?.length > 0 ? (
           movieList.map((detail: any) => (
             <ListItem key={detail} className="flex justify-between w-full">
               <Box className="flex w-full justify-between">
@@ -26,7 +23,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                     sx={{ width: 50 }}
                     component="img"
                     image={detail.img}
-                    alt="stranger things"
+                    alt={detail.tit}
                   />
                   <Box>
                     {/* for title */}
