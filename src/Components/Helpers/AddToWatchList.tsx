@@ -1,1 +1,1 @@
-export default function CardDetails({ props }: any) {}
+export default function AddToWatchList({ props }: any) {}
