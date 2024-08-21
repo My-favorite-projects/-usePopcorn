@@ -65,6 +65,36 @@ export default function Slider({ sliderId, showCardDetails }: any) {
           <SwiperSlide onClick={asd}>
             <Card />
           </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide onClick={asd}>
+            <Card />
+          </SwiperSlide>
         </Swiper>
       </Box>
     </>

@@ -4,8 +4,8 @@ import Header from "../../ComponentSections/Header/Header";
 import Hero from "../../ComponentSections/Hero/Hero";
 import Slider from "../../ComponentSections/Slider/Slider";
 import Footer from "../../ComponentSections/Footer/Footer";
-import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
+import FeaturedMovie from "../../ComponentSections/Slider/FeaturedMovie";
 
 export default function LandingPage({ setCardDetails, movieList }: any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +22,8 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <Hero />
       </Box>
       <Container className="min-w-full p-0">
-        <Slider sliderId="2" showCardDetails={setCardDetails} />
-        <Slider sliderId="1" showCardDetails={setCardDetails} />
+        <FeaturedMovie titleSec="Featured Movie" showCard={setCardDetails} />
+        <FeaturedMovie titleSec="New Arrival" showCard={setCardDetails} />
         <Footer />
       </Container>
     </>
