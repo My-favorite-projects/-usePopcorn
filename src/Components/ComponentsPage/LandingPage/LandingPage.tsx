@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container, Box } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
 import Hero from "../../ComponentSections/Hero/Hero";
-import Slider from "../../ComponentSections/Slider/Slider";
 import Footer from "../../ComponentSections/Footer/Footer";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";

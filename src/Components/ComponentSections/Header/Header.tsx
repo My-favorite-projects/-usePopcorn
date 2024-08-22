@@ -1,5 +1,5 @@
-import { Box, Typography, IconButton, InputBase, Button } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import { Box, Typography, Button } from "@mui/material";
+import { SearchBar } from "../../ComponentsElement/SearchBar";
 
 export default function Header({ setIsOpen, showCardDetails }: any) {
   return (
@@ -14,21 +14,7 @@ export default function Header({ setIsOpen, showCardDetails }: any) {
           </Button>
         </Box>
 
-        <Box className="border border-2 rounded-md w-2/5 flex items-center">
-          <InputBase
-            sx={{
-              ml: 1,
-              flex: 1,
-              color: "white",
-            }}
-            placeholder="What do you want to watch?"
-            inputProps={{ "aria-label": "What do you want to watch?" }}
-            className="w-full ffb text-8xl text-light"
-          />
-          <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-            <SearchIcon sx={{ color: "white" }} />
-          </IconButton>
-        </Box>
+        <SearchBar />
 
         <Box className="flex items-center">
           <Button
