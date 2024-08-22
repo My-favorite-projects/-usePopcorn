@@ -15,6 +15,7 @@ export default function CardDetails({
   const [isOpen, setIsOpen] = useState(false);
   const { img, tit, desc } = cardDetails;
   const [clicked, setClicked] = useState(false);
+  const [query, setQuery] = useState("");
 
   function addCardToWatchList() {
     if (clicked) {
@@ -41,7 +42,11 @@ export default function CardDetails({
           backgroundPosition: "center",
         }}
       >
-        <Header setIsOpen={setIsOpen} showCardDetails={setCardDetails} />
+        <Header
+          setIsOpen={setIsOpen}
+          showCardDetails={setCardDetails}
+          setQuery={setQuery}
+        />
         <WatchListDrawer
           isOpen={isOpen}
           setIsOpen={setIsOpen}
