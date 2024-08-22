@@ -5,6 +5,8 @@ import CardDetails from "./Components/ComponentsPage/CardDetails/CardDetails";
 export default function App() {
   const [cardDetails, setCardDetails] = useState(null);
   const [movieList, setMovieList] = useState([]);
+  // const [query, setQuery] = useState("");
+  // const { dataSearch, isLoading } = GetData(query);
 
   return (
     <>

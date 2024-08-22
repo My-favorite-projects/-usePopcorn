@@ -7,10 +7,14 @@ import WatchListDrawer from "../../ComponentsElement/WatchList";
 import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";
 import GetData from "../../../API/GetData";
 
-export default function LandingPage({ setCardDetails, movieList }: any) {
+export default function LandingPage({
+  setCardDetails,
+  movieList,
+}: // setQuery,
+any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch } = GetData(query);
+  const { dataSearch, isLoading } = GetData(query);
   const { dataSearch: featuredData } = GetData("barbie"); //Destructuring Assignment with Renaming
   const { dataSearch: arrivalData } = GetData("marvel"); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData } = GetData("horror"); //Destructuring Assignment with Renaming

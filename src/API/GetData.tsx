@@ -20,6 +20,7 @@ export default function useGetData(query) {
         if (data.Response === "False") throw new Error(data.Error);
 
         setDataSearch(data.Search || []);
+        console.log(data);
       } catch (error) {
         console.log(error.message);
       } finally {

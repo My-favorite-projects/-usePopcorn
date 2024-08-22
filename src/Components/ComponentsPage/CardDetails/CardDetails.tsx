@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Container, Button, Typography, Box } from "@mui/material";
+import { Container, Button, Typography, Box, Link } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
 import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/TextValueCardDetails";
 import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
+import { imdbWeb } from "../../../constant/constants";
 
 export default function CardDetails({
   setCardDetails,
@@ -67,9 +68,21 @@ export default function CardDetails({
             sx={{ background: "#BE123C" }}
             onClick={addCardToWatchList}
           >
-            <Typography className="text-light ffb" variant="h6">
-              {clicked ? "Watch" : "add to watch list"}
-            </Typography>
+            {clicked ? (
+              <Link
+                className="ffb"
+                href={imdbWeb}
+                underline="none"
+                variant="h6"
+                sx={{ color: "#fff" }}
+              >
+                Watch Trailer
+              </Link>
+            ) : (
+              <Typography className="ffb" variant="h6">
+                Add to watch list
+              </Typography>
+            )}
           </Button>
         </Box>
       </Container>
