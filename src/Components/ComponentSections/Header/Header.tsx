@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { SearchBar } from "../../ComponentsElement/SearchBar";
 
-export default function Header({ setIsOpen, showCardDetails }: any) {
+export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
   return (
     <header>
       <Box className="flex justify-between w-11/12 m-auto py-3">
@@ -14,7 +14,7 @@ export default function Header({ setIsOpen, showCardDetails }: any) {
           </Button>
         </Box>
 
-        <SearchBar />
+        <SearchBar setQuery={setQuery} />
 
         <Box className="flex items-center">
           <Button

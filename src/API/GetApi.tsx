@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { KEY } from "../constant/constants";
 
 export default function GetApi({ query }: { query: string }) {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const KEY = "6c9f2c52"; // YOUR API KEY
 
   useEffect(
     function () {
@@ -24,6 +24,7 @@ export default function GetApi({ query }: { query: string }) {
 
           setMovies(data.Search);
         } catch (error) {
+          console.log(error);
         } finally {
           setIsLoading(false);
         }
