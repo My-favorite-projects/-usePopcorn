@@ -2,7 +2,12 @@ import { Box, Button, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Slider from "./Slider";
 
-export default function TemplateSlider({ showCard, titleSec, movies }: any) {
+export default function TemplateSlider({
+  showCard,
+  titleSec,
+  movies,
+  uniqeQuery,
+}: any) {
   return (
     <Box className="w-11/12 m-auto mb-10 relative">
       <Box className="w-full flex py-6 justify-between">
