@@ -11,7 +11,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
 
-  GetData(query);
+  const { dataSearch, isLoading } = GetData(query);
 
   return (
     <>
@@ -25,8 +25,16 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <Hero />
       </Box>
       <Container className="min-w-full p-0">
-        <TemplateSlider titleSec="Featured Movie" showCard={setCardDetails} />
-        <TemplateSlider titleSec="New Arrival" showCard={setCardDetails} />
+        <TemplateSlider
+          titleSec="Featured Movie"
+          showCard={setCardDetails}
+          movies={dataSearch}
+        />
+        <TemplateSlider
+          titleSec="New Arrival"
+          showCard={setCardDetails}
+          movies={dataSearch}
+        />
         <Footer />
       </Container>
     </>

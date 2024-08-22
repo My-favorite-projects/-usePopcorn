@@ -2,7 +2,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Box, Typography } from "@mui/material";
 import IMDb from "./ScoreMovie";
 
-export default function Card() {
+export default function Card({ title, year, image }: any) {
   return (
     <Box
       className="text-secondary"
@@ -15,19 +15,19 @@ export default function Card() {
       <CardMedia
         component="img"
         height="370"
-        image="./public/images/Poster.svg"
+        image={image}
         alt="stranger things"
         className="cursor-pointer"
       />
       <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="h6">
-        Title
+        {year}
       </Typography>
       <Typography
         className="text-dark"
         sx={{ fontSize: 18, fontWeight: 600 }}
         variant="h5"
       >
-        Description
+        {title}
       </Typography>
       <IMDb
         colorScore="dark"

@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function Slider({ sliderId, showCardDetails }: any) {
+export default function Slider({ sliderId, showCardDetails, movies }: any) {
   function asd(e: any) {
     let [img, tit, desc] = e.target.parentElement.children;
 
@@ -62,39 +62,15 @@ export default function Slider({ sliderId, showCardDetails }: any) {
             nextEl: `#swiper-next-${sliderId}`,
           }}
         >
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide onClick={asd}>
-            <Card />
-          </SwiperSlide>
+          {movies.map((movie: any, index: number) => (
+            <SwiperSlide key={index} onClick={asd}>
+              <Card
+                title={movie.Title}
+                year={movie.Year}
+                image={movie.Poster}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Box>
     </>
