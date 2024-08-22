@@ -62,15 +62,9 @@ export default function CardDetails({
             sx={{ background: "#BE123C" }}
             onClick={addCardToWatchList}
           >
-            {clicked ? (
-              <Typography className="text-light ffb" variant="h6">
-                Watch
-              </Typography>
-            ) : (
-              <Typography className="text-light ffb" variant="h6">
-                add to watch list
-              </Typography>
-            )}
+            <Typography className="text-light ffb" variant="h6">
+              {clicked ? "Watch" : "add to watch list"}
+            </Typography>
           </Button>
         </Box>
       </Container>
