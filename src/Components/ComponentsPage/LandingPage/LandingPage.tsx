@@ -17,7 +17,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
 
   return (
     <>
-      <Box className="w-full bg-black">
+      <Box className="w-full">
         <Header setIsOpen={setIsOpen} setQuery={setQuery} />
         <WatchListDrawer
           isOpen={isOpen}
