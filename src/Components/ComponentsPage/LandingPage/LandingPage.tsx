@@ -1,17 +1,13 @@
 import { useState } from "react";
 import { Container, Box } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
-import Hero from "../../ComponentSections/Hero/Hero";
 import Footer from "../../ComponentSections/Footer/Footer";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";
 import GetData from "../../../API/GetData";
+import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
-export default function LandingPage({
-  setCardDetails,
-  movieList,
-}: // setQuery,
-any) {
+export default function LandingPage({ setCardDetails, movieList }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const { dataSearch, isLoading } = GetData(query);
@@ -21,14 +17,14 @@ any) {
 
   return (
     <>
-      <Box className="bg-hero w-full">
+      <Box className="w-full">
         <Header setIsOpen={setIsOpen} setQuery={setQuery} />
         <WatchListDrawer
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           movieList={movieList}
         />
-        <Hero />
+        <SliderHero />
       </Box>
       <Container className="min-w-full p-0">
         <TemplateSlider

@@ -30,7 +30,7 @@
 }
 
 .bg-hero {
-  background-image: url(./public/images/Poster.png);
+  /* background-image: url(./public/images/Poster.png); */
   background-size: cover;
   background-position: center;
 }
