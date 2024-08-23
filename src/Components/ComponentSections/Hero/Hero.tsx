@@ -1,7 +1,7 @@
 import { Typography, Button, Box } from "@mui/material";
 import ScoreMovie from "../../ComponentsElement/ScoreMovie.tsx";
 
-export default function Hero({ desc, img, title }: any) {
+export default function Hero({ desc, img, title, href }: any) {
   return (
     <Box
       className="w-full py-32 px-20"
@@ -9,6 +9,8 @@ export default function Hero({ desc, img, title }: any) {
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        bgcolor: "red",
+        height: "40vw",
       }}
     >
       <Box className="w-4/12">
@@ -30,9 +32,10 @@ export default function Hero({ desc, img, title }: any) {
           variant="contained"
           className="hoverBTN"
           sx={{ background: "#BE123C" }}
+          href={href}
         >
           <Typography className="text-light ffb" variant="h6">
-            add to watch list
+            Watch Trailer
           </Typography>
         </Button>
       </Box>

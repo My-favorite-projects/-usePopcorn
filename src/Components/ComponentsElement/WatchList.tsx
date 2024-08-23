@@ -54,7 +54,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                     }}
                     variant="contained"
                   >
-                    Watch
+                    Watch Trailer
                   </Button>
                   <StarScore lengthStar={detail.score} />
                 </Box>

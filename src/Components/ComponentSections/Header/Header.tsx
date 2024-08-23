@@ -8,7 +8,7 @@ export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
           <Button onClick={() => showCardDetails(null)}>
-            <Typography variant="h4" className="ffb text-light">
+            <Typography variant="h4" className="ffb text-dark">
               MovieBox
             </Typography>
           </Button>
@@ -20,10 +20,10 @@ export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
           <Button
             variant="text"
             size="small"
-            sx={{ border: 2, borderColor: "white" }}
+            sx={{ border: 2, borderColor: "#9CA3AF" }}
             onClick={() => setIsOpen(true)}
           >
-            <Typography variant="h5" className="ffb text-light">
+            <Typography variant="h5" className="ffb text-secondary">
               Watch List
             </Typography>
           </Button>

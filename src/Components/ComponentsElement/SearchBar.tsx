@@ -8,17 +8,16 @@ export function SearchBar({ query, setQuery }: any) {
         sx={{
           ml: 1,
           flex: 1,
-          color: "white",
         }}
         placeholder="What do you want to watch?"
         inputProps={{ "aria-label": "What do you want to watch?" }}
-        className="w-full ffb text-8xl text-light"
+        className="w-full ffb text-8xl text-secondary"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-        <SearchIcon sx={{ color: "white" }} />
+        <SearchIcon sx={{ color: "#9CA3AF" }} />
       </IconButton>
     </Box>
   );

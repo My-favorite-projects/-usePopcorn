@@ -13,18 +13,23 @@ export default function SliderHero() {
       <Swiper
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
+        className="mySwiper "
       >
         {dataCardHero.map((data) => (
           <SwiperSlide>
-            <Hero title={data.title} desc={data.desc} img={data.img} />
+            <Hero
+              title={data.title}
+              desc={data.desc}
+              img={data.img}
+              href={data.href}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
