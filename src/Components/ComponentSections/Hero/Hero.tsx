@@ -1,15 +1,19 @@
-import { Container, Typography, Button, Box } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import ScoreMovie from "../../ComponentsElement/ScoreMovie.tsx";
 
-export default function Hero() {
+export default function Hero({ desc, img, title }: any) {
   return (
-    <Container
-      className="w-1/12 py-32 mb-10"
-      sx={{ marginLeft: "4%", marginRight: "0" }}
+    <Box
+      className="w-full py-32"
+      sx={{
+        backgroundImage: `url(${img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <Box className="pb-4">
         <Typography variant="h3" className="ffb text-light">
-          John Wick 3 :
+          {title}
         </Typography>
 
         <Typography variant="h3" className="ffb text-light">
@@ -22,9 +26,7 @@ export default function Hero() {
       </Box>
 
       <Typography variant="body2" className="text-light w-80 pb-4">
-        John Wick is on the run after killing a member of the international
-        assassins' guild, and with a $14 million price tag on his head, he is
-        the target of hit men and women everywhere.
+        {desc}
       </Typography>
 
       <Button
@@ -36,6 +38,6 @@ export default function Hero() {
           add to watch list
         </Typography>
       </Button>
-    </Container>
+    </Box>
   );
 }
