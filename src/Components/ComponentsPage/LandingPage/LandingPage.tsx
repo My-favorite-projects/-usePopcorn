@@ -8,12 +8,13 @@ import GetData from "../../../API/GetData";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
 export default function LandingPage({ setCardDetails, movieList }: any) {
+  const [apiCode, setApiCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch, isLoading } = GetData(query);
-  const { dataSearch: featuredData } = GetData("Titanic"); //Destructuring Assignment with Renaming
-  const { dataSearch: arrivalData } = GetData("American Horror Story"); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData } = GetData("Captain Marvel"); //Destructuring Assignment with Renaming
+  const { dataSearch, isLoading } = GetData(apiCode, query);
+  const { dataSearch: featuredData } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
+  const { dataSearch: arrivalData } = GetData("t", "American Horror Story"); //Destructuring Assignment with Renaming
+  const { dataSearch: horrorData } = GetData("t", "Captain Marvel"); //Destructuring Assignment with Renaming
 
   return (
     <>
