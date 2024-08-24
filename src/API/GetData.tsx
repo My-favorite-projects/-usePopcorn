@@ -19,8 +19,13 @@ export default function GetData(apiCode, query) {
         const data = await res.json();
         if (data.Response === "False") throw new Error(data.Error);
 
-        setDataSearch(data);
-        console.log(data);
+        if (apiCode === "s") {
+          setDataSearch(data.Search);
+        } else {
+          setDataSearch(data);
+        }
+
+        console.log(data.Search);
       } catch (error) {
         console.log(error.message);
       } finally {

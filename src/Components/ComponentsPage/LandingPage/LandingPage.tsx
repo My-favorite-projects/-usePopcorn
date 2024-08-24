@@ -13,8 +13,8 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   const [query, setQuery] = useState("");
   const { dataSearch, isLoading } = GetData(apiCode, query);
   const { dataSearch: featuredData } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
-  const { dataSearch: arrivalData } = GetData("t", "American Horror Story"); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData } = GetData("t", "Captain Marvel"); //Destructuring Assignment with Renaming
+  // const { dataSearch: arrivalData } = GetData("t", "American Horror Story"); //Destructuring Assignment with Renaming
+  // const { dataSearch: horrorData } = GetData("t", "Captain Marvel"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           showCard={setCardDetails}
           movies={featuredData ? [featuredData] : []}
         />
-        <TemplateSlider
+        {/* <TemplateSlider
           titleSec="New Arrival"
           showCard={setCardDetails}
           movies={arrivalData ? [arrivalData] : []}
@@ -42,7 +42,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           titleSec="Horror Movie"
           showCard={setCardDetails}
           movies={horrorData ? [horrorData] : []}
-        />
+        /> */}
         <Footer />
       </Container>
     </>
