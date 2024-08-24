@@ -2,7 +2,7 @@ import { KEY } from "../constant/constants";
 import { useState, useEffect } from "react";
 
 export default function useGetData(query) {
-  const [dataSearch, setDataSearch] = useState([]);
+  const [dataSearch, setDataSearch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function useGetData(query) {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          `http://www.omdbapi.com/?apikey=${KEY}&t=${query}`
         );
 
         if (!res.ok)
@@ -19,7 +19,7 @@ export default function useGetData(query) {
         const data = await res.json();
         if (data.Response === "False") throw new Error(data.Error);
 
-        setDataSearch(data.Search || []);
+        setDataSearch(data);
         console.log(data);
       } catch (error) {
         console.log(error.message);
