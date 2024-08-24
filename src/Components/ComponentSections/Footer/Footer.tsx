@@ -1,4 +1,4 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,10 +9,18 @@ export default function Footer() {
     <footer>
       <Container className="text-center">
         <Box className="flex justify-between w-2/5 m-auto mb-4">
-          <FacebookIcon />
-          <InstagramIcon />
-          <TwitterIcon />
-          <YouTubeIcon />
+          <Link href="https://facebook.com/imdb">
+            <FacebookIcon className="text-dark" />
+          </Link>
+          <Link href="https://instagram.com/imdb">
+            <InstagramIcon className="text-dark" />
+          </Link>
+          <Link href="https://twitter.com/imdb">
+            <TwitterIcon className="text-dark" />
+          </Link>
+          <Link href="https://youtube.com/imdb/">
+            <YouTubeIcon className="text-dark" />
+          </Link>
         </Box>
 
         <Box className="flex justify-between w-3/5 m-auto mb-4">
