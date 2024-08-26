@@ -26,12 +26,6 @@ export default function GetData(apiCode, query) {
           setDataSearch(data ? [data] : []);
         }
 
-        // console.log(data);
-        //   setDataSearch(data.Search);
-        // } else {
-        //   setDataSearch(data);
-        // }
-
         console.log(data.Search);
       } catch (error) {
         console.log(error.message);

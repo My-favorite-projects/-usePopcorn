@@ -8,13 +8,11 @@ import GetData from "../../../API/GetData";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
 export default function LandingPage({ setCardDetails, movieList }: any) {
-  const [apiCode, setApiCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  // const { dataSearch, isLoading } = GetData(apiCode, query);
   const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
-  const { dataSearch: test } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
+  // const { dataSearch: test } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -28,22 +26,24 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <SliderHero />
       </Box>
       <Container className="min-w-full p-0">
-        <TemplateSlider
+        {/* <TemplateSlider
           titleSec="Featured Movie"
           showCard={setCardDetails}
-          movies={test}
+          query={query}
           // movies={featuredData ? [featuredData] : []}
-        />
-        {/* <TemplateSlider
+        /> */}
+        <TemplateSlider
           titleSec="New Arrival"
           showCard={setCardDetails}
-          movies={arrivalData ? [arrivalData] : []}
+          movies={arrivalData ? arrivalData : []}
+          query={query}
         />
         <TemplateSlider
           titleSec="Horror Movie"
           showCard={setCardDetails}
-          movies={horrorData ? [horrorData] : []}
-        /> */}
+          movies={horrorData ? horrorData : []}
+          query={query}
+        />
         <Footer />
       </Container>
     </>

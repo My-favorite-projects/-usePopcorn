@@ -8,8 +8,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import GetData from "../../../API/GetData";
 
-export default function Slider({ sliderId, showCardDetails, movies }: any) {
+export default function Slider({
+  sliderId,
+  showCardDetails,
+  movies,
+  query,
+}: any) {
   function asd(e: any) {
     let [img, tit, desc] = e.target.parentElement.children;
 
@@ -69,6 +75,7 @@ export default function Slider({ sliderId, showCardDetails, movies }: any) {
                 year={movie.Year}
                 image={movie.Poster}
                 Metascore={movie.Metascore}
+                Genre={movies.Genre}
               />
             </SwiperSlide>
           ))}
