@@ -2,11 +2,8 @@ import { KEY } from "../constant/constants";
 import { useState, useEffect } from "react";
 
 export default function GetData(apiCode, query) {
-<<<<<<< HEAD
   const [dataSearch, setDataSearch] = useState([]);
-=======
-  const [dataSearch, setDataSearch] = useState(null);
->>>>>>> fcf310917d3eb94cd114eaad43dcadabd467497c
+  // const [dataSearch, setDataSearch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -29,13 +26,13 @@ export default function GetData(apiCode, query) {
           setDataSearch(data ? [data] : []);
         }
 
-        console.log(data);
+        // console.log(data);
         //   setDataSearch(data.Search);
         // } else {
         //   setDataSearch(data);
         // }
 
-        // console.log(data.Search);
+        console.log(data.Search);
       } catch (error) {
         console.log(error.message);
       } finally {

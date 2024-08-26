@@ -69,10 +69,6 @@ export default function Slider({ sliderId, showCardDetails, movies }: any) {
                 year={movie.Year}
                 image={movie.Poster}
                 Metascore={movie.Metascore}
-<<<<<<< HEAD
-=======
-                Genre={movie.Genre}
->>>>>>> fcf310917d3eb94cd114eaad43dcadabd467497c
               />
             </SwiperSlide>
           ))}

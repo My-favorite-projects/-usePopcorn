@@ -11,16 +11,10 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   const [apiCode, setApiCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch, isLoading } = GetData(apiCode, query);
-<<<<<<< HEAD
+  // const { dataSearch, isLoading } = GetData(apiCode, query);
   const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
-  const { dataSearch: test } = GetData("t", "ورودی"); //Destructuring Assignment with Renaming
-=======
-  const { dataSearch: featuredData } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
-  // const { dataSearch: arrivalData } = GetData("t", "American Horror Story"); //Destructuring Assignment with Renaming
-  // const { dataSearch: horrorData } = GetData("t", "Captain Marvel"); //Destructuring Assignment with Renaming
->>>>>>> fcf310917d3eb94cd114eaad43dcadabd467497c
+  const { dataSearch: test } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -37,11 +31,8 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <TemplateSlider
           titleSec="Featured Movie"
           showCard={setCardDetails}
-<<<<<<< HEAD
           movies={test}
-=======
-          movies={featuredData ? [featuredData] : []}
->>>>>>> fcf310917d3eb94cd114eaad43dcadabd467497c
+          // movies={featuredData ? [featuredData] : []}
         />
         {/* <TemplateSlider
           titleSec="New Arrival"
