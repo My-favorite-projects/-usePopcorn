@@ -16,7 +16,7 @@ export default function IMDb(props: any) {
 
         <Box>
           <Typography className={`text-${props.colorScore} ffr`}>
-            {props.score} / 100
+            {props.score * 10} / 100
           </Typography>
         </Box>
       </Box>

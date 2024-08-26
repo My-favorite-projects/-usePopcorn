@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import GetData from "../../../API/GetData";
 
 export default function Slider({
   sliderId,
@@ -75,7 +74,8 @@ export default function Slider({
                 year={movie.Year}
                 image={movie.Poster}
                 Metascore={movie.Metascore}
-                Genre={movies.Genre}
+                Genre={movie.Genre}
+                score={movie.imdbRating}
               />
             </SwiperSlide>
           ))}
