@@ -31,7 +31,7 @@ export default function Footer() {
 
         <Box>
           <Typography variant="subtitle1" className="text-secondary pb-4">
-            © 2021 MovieBox by Adriana Eka Prayudha
+            © 2021 MovieBox Development by RC&MAH
           </Typography>
         </Box>
       </Container>

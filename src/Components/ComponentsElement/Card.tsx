@@ -2,7 +2,11 @@ import CardMedia from "@mui/material/CardMedia";
 import { Box, Typography } from "@mui/material";
 import IMDb from "./ScoreMovie";
 
+<<<<<<< HEAD
 export default function Card({ title, year, image, Metascore }: any) {
+=======
+export default function Card({ title, year, image, Metascore, Genre }: any) {
+>>>>>>> fcf310917d3eb94cd114eaad43dcadabd467497c
   return (
     <Box
       className="text-secondary"
@@ -37,7 +41,7 @@ export default function Card({ title, year, image, Metascore }: any) {
         weight="800"
       />
       <Typography variant="h6" sx={{ fontSize: 12, fontWeight: 600 }}>
-        Action, Adventure, Horror
+        {Genre}
       </Typography>
     </Box>
   );
