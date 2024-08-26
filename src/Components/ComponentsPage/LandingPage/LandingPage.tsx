@@ -15,6 +15,9 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
   const { dataSearch: test } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
+  const { dataSearch: featuredData } = GetData("t", query); //Destructuring Assignment with Renaming
+  // const { dataSearch: arrivalData } = GetData("t", "American Horror Story"); //Destructuring Assignment with Renaming
+  // const { dataSearch: horrorData } = GetData("t", "Captain Marvel"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -34,16 +37,6 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           movies={test}
           // movies={featuredData ? [featuredData] : []}
         />
-        {/* <TemplateSlider
-          titleSec="New Arrival"
-          showCard={setCardDetails}
-          movies={arrivalData ? [arrivalData] : []}
-        />
-        <TemplateSlider
-          titleSec="Horror Movie"
-          showCard={setCardDetails}
-          movies={horrorData ? [horrorData] : []}
-        /> */}
         <Footer />
       </Container>
     </>

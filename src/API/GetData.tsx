@@ -1,9 +1,8 @@
 import { KEY } from "../constant/constants";
 import { useState, useEffect } from "react";
 
-export default function GetData(apiCode, query) {
-  const [dataSearch, setDataSearch] = useState([]);
-  // const [dataSearch, setDataSearch] = useState(null);
+export default function GetData(apiCode: string, query: any) {
+  const [dataSearch, setDataSearch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
