@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Typography, Box, Link } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
-import TextValueCardDetails from "../../ComponentSections/TextValueCardDetails/TextValueCardDetails";
 import StarScore from "../../ComponentsElement/StarScore";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 import { imdbWeb } from "../../../constant/constants";
@@ -55,7 +54,13 @@ export default function CardDetails({
         />
         <Box className="flex flex-col pl-14 mt-10 w-96">
           <Box className="mb-4">
-            <TextValueCardDetails movieName={tit} movieDesc={desc} />
+            <Typography variant="h2" className="text-light ffb">
+              {tit}
+            </Typography>
+
+            <Typography variant="body1" className="text-light ffR w-full">
+              {desc}
+            </Typography>
           </Box>
 
           <Box className="mb-4">
