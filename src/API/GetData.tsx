@@ -1,7 +1,7 @@
 import { KEY } from "../constant/constants";
 import { useState, useEffect } from "react";
 
-export default function useGetData(query) {
+export default function GetData(apiCode, query) {
   const [dataSearch, setDataSearch] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -10,7 +10,7 @@ export default function useGetData(query) {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          `http://www.omdbapi.com/?apikey=${KEY}&${apiCode}=${query}`
         );
 
         if (!res.ok)
@@ -19,7 +19,12 @@ export default function useGetData(query) {
         const data = await res.json();
         if (data.Response === "False") throw new Error(data.Error);
 
-        setDataSearch(data.Search || []);
+        if (apiCode === "s") {
+          setDataSearch(data.Search || []);
+        } else {
+          setDataSearch(data ? [data] : []);
+        }
+
         console.log(data);
       } catch (error) {
         console.log(error.message);
@@ -27,10 +32,10 @@ export default function useGetData(query) {
         setIsLoading(false);
       }
     }
-    if (query) {
+    if (apiCode) {
       fetchMovies();
     }
-  }, [query]);
+  }, [apiCode, query]);
 
   return { dataSearch, isLoading };
 }

@@ -8,12 +8,13 @@ import GetData from "../../../API/GetData";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
 export default function LandingPage({ setCardDetails, movieList }: any) {
+  const [apiCode, setApiCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch, isLoading } = GetData(query);
-  const { dataSearch: featuredData } = GetData("barbie"); //Destructuring Assignment with Renaming
-  const { dataSearch: arrivalData } = GetData("marvel"); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData } = GetData("horror"); //Destructuring Assignment with Renaming
+  const { dataSearch, isLoading } = GetData(apiCode, query);
+  const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
+  const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
+  const { dataSearch: test } = GetData("t", "ورودی"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -30,7 +31,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <TemplateSlider
           titleSec="Featured Movie"
           showCard={setCardDetails}
-          movies={featuredData}
+          movies={test}
         />
         <TemplateSlider
           titleSec="New Arrival"

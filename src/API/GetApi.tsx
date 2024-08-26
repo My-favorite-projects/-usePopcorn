@@ -22,7 +22,7 @@ export default function GetApi({ query }: { query: string }) {
           console.log(data);
           if (data.Response === "False") throw new Error("Movie not found...");
 
-          setMovies(data.Search);
+          // setMovies(data.Search);
         } catch (error) {
           console.log(error);
         } finally {

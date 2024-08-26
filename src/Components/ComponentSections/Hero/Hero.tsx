@@ -9,7 +9,6 @@ export default function Hero({ desc, img, title, href }: any) {
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        bgcolor: "red",
         height: "40vw",
       }}
     >
