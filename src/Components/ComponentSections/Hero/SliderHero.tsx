@@ -20,10 +20,10 @@ export default function SliderHero() {
           clickable: true,
         }}
         modules={[Autoplay]}
-        className="mySwiper "
+        className="mySwiper"
       >
         {dataCardHero.map((data) => (
-          <SwiperSlide>
+          <SwiperSlide key={data.title}>
             <Hero
               title={data.title}
               desc={data.desc}

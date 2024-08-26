@@ -2,7 +2,14 @@ import CardMedia from "@mui/material/CardMedia";
 import { Box, Typography } from "@mui/material";
 import IMDb from "./ScoreMovie";
 
-export default function Card({ title, year, image, Metascore, Genre }: any) {
+export default function Card({
+  title,
+  year,
+  image,
+  Metascore,
+  Genre,
+  score,
+}: any) {
   return (
     <Box
       className="text-secondary"
@@ -32,9 +39,9 @@ export default function Card({ title, year, image, Metascore, Genre }: any) {
       <IMDb
         colorScore="dark"
         percentage={Metascore}
-        score={Metascore}
         size="12"
         weight="800"
+        score={score}
       />
       <Typography variant="h6" sx={{ fontSize: 12, fontWeight: 600 }}>
         {Genre}
