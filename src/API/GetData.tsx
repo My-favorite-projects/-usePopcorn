@@ -19,13 +19,24 @@ export default function GetData(apiCode: string, query: any) {
         const data = await res.json();
         if (data.Response === "False") throw new Error(data.Error);
 
+        let detailedData = [];
+
         if (apiCode === "s") {
-          setDataSearch(data.Search || []);
+          const movies = data.Search || [];
+
+          // Fetch detailed info for each movie
+          for (const movie of movies) {
+            const detailRes = await fetch(
+              `http://www.omdbapi.com/?apikey=${KEY}&i=${movie.imdbID}`
+            );
+            const detailData = await detailRes.json();
+            detailedData.push(detailData);
+          }
+
+          setDataSearch(detailedData);
         } else {
           setDataSearch(data ? [data] : []);
         }
-
-        console.log(data.Search);
       } catch (error) {
         console.log(error.message);
       } finally {
