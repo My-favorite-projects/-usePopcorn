@@ -12,7 +12,6 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   const [query, setQuery] = useState("");
   const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
-  // const { dataSearch: test } = GetData("t", "Titanic"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -26,12 +25,6 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         <SliderHero />
       </Box>
       <Container className="min-w-full p-0">
-        {/* <TemplateSlider
-          titleSec="Featured Movie"
-          showCard={setCardDetails}
-          query={query}
-          // movies={featuredData ? [featuredData] : []}
-        /> */}
         <TemplateSlider
           titleSec="New Arrival"
           showCard={setCardDetails}
