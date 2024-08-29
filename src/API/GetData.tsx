@@ -43,9 +43,7 @@ export default function GetData(apiCode: string, query: any) {
         setIsLoading(false);
       }
     }
-    if (apiCode) {
-      fetchMovies();
-    }
+    fetchMovies();
   }, [apiCode, query]);
 
   return { dataSearch, isLoading };

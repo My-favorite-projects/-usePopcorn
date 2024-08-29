@@ -3,12 +3,14 @@ import { SearchBar } from "../../ComponentsElement/SearchBar";
 
 export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
   return (
-    <header>
+    <header
+      style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 3 }}
+    >
       <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">
           <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
           <Button onClick={() => showCardDetails(null)}>
-            <Typography variant="h4" className="ffb text-dark">
+            <Typography variant="h4" className="ffb text-light">
               MovieBox
             </Typography>
           </Button>
@@ -20,10 +22,10 @@ export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
           <Button
             variant="text"
             size="small"
-            sx={{ border: 2, borderColor: "#9CA3AF" }}
+            sx={{ border: 2, borderColor: "#fff" }}
             onClick={() => setIsOpen(true)}
           >
-            <Typography variant="h5" className="ffb text-secondary">
+            <Typography variant="h5" className="ffb text-light">
               Watch List
             </Typography>
           </Button>

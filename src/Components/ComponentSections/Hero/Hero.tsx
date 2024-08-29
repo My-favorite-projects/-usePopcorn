@@ -1,7 +1,7 @@
 import { Typography, Button, Box } from "@mui/material";
 import ScoreMovie from "../../ComponentsElement/ScoreMovie.tsx";
 
-export default function Hero({ desc, img, title, href }: any) {
+export default function Hero({ desc, img, title, href, rating }: any) {
   return (
     <Box
       className="w-full py-32 px-20"
@@ -9,7 +9,7 @@ export default function Hero({ desc, img, title, href }: any) {
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "40vw",
+        height: "42vw",
       }}
     >
       <Box className="w-4/12">
@@ -20,7 +20,12 @@ export default function Hero({ desc, img, title, href }: any) {
         </Box>
 
         <Box className="py-2">
-          <ScoreMovie size="14" score="30" colorScore="light" percentage="97" />
+          <ScoreMovie
+            size="14"
+            score={rating / 10}
+            colorScore="light"
+            percentage={rating}
+          />
         </Box>
 
         <Typography variant="body2" className="text-light pb-4">

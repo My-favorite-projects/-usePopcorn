@@ -26,21 +26,21 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                     alt={detail.tit}
                   />
                   <Box>
-                    {/* for title */}
+                    {/* for description */}
                     <Typography
                       className="font-bold"
                       sx={{ fontWeight: 600, fontSize: 18 }}
                       variant="h6"
                     >
-                      {detail.tit}
+                      {detail.desc}
                     </Typography>
-                    {/* for description */}
+                    {/* for title */}
                     <Typography
                       className="font-bold"
                       sx={{ fontWeight: 400, fontSize: 14 }}
                       variant="h6"
                     >
-                      {detail.desc}
+                      {detail.tit}
                     </Typography>
                   </Box>
                 </Box>

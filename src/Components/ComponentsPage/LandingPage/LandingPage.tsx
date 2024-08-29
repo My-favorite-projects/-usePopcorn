@@ -10,8 +10,8 @@ import SliderHero from "../../ComponentSections/Hero/SliderHero";
 export default function LandingPage({ setCardDetails, movieList }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch: arrivalData } = GetData("s", "marvel"); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData } = GetData("s", "horror"); //Destructuring Assignment with Renaming
+  const { dataSearch: arrivalData } = GetData("s", "game"); //Destructuring Assignment with Renaming
+  const { dataSearch: horrorData } = GetData("s", "mask"); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -32,7 +32,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           query={query}
         />
         <TemplateSlider
-          titleSec="Horror Movie"
+          titleSec="Funny Movies"
           showCard={setCardDetails}
           movies={horrorData ? horrorData : []}
           query={query}

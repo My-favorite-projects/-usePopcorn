@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Box } from "@mui/material";
 import Hero from "./Hero.tsx";
 import { dataCardHero } from "./dataCards.tsx";
@@ -11,15 +11,12 @@ export default function SliderHero() {
   return (
     <Box className="w-full">
       <Swiper
-        centeredSlides={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay]}
+        pagination={true}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         {dataCardHero.map((data) => (
@@ -29,6 +26,7 @@ export default function SliderHero() {
               desc={data.desc}
               img={data.img}
               href={data.href}
+              rating={data.rating}
             />
           </SwiperSlide>
         ))}
