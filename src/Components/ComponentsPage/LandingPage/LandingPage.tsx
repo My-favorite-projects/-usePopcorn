@@ -10,8 +10,14 @@ import SliderHero from "../../ComponentSections/Hero/SliderHero";
 export default function LandingPage({ setCardDetails, movieList }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch: arrivalData } = GetData("s", "game"); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData } = GetData("s", "mask"); //Destructuring Assignment with Renaming
+  const { dataSearch: arrivalData, isLoading: arrivalLoading } = GetData(
+    "s",
+    "game"
+  ); //Destructuring Assignment with Renaming
+  const { dataSearch: horrorData, isLoading: horrorLoading } = GetData(
+    "s",
+    "mask"
+  ); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -30,12 +36,14 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           showCard={setCardDetails}
           movies={arrivalData ? arrivalData : []}
           query={query}
+          isLoading={arrivalLoading}
         />
         <TemplateSlider
           titleSec="Funny Movies"
           showCard={setCardDetails}
           movies={horrorData ? horrorData : []}
           query={query}
+          isLoading={horrorLoading}
         />
         <Footer />
       </Container>

@@ -22,7 +22,7 @@ export default function GetData(apiCode: string, query: any) {
         let detailedData = [];
 
         if (apiCode === "s") {
-          const movies = data.Search || [];
+          const movies = data.Search;
 
           // Fetch detailed info for each movie
           for (const movie of movies) {
@@ -34,13 +34,13 @@ export default function GetData(apiCode: string, query: any) {
           }
 
           setDataSearch(detailedData);
-        } else {
-          setDataSearch(data ? [data] : []);
         }
       } catch (error) {
         console.log(error.message);
       } finally {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 3000);
       }
     }
     fetchMovies();

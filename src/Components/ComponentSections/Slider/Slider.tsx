@@ -13,7 +13,7 @@ export default function Slider({
   sliderId,
   showCardDetails,
   movies,
-  query,
+  isLoading,
 }: any) {
   function asd(e: any) {
     let [img, tit, desc] = e.target.parentElement.children;
@@ -68,7 +68,7 @@ export default function Slider({
           }}
         >
           {movies.map((movie: any, index: number) => (
-            <SwiperSlide key={index} onClick={asd}>
+            <SwiperSlide key={movie.imdbID} onClick={asd}>
               <Card
                 title={movie.Title}
                 year={movie.Year}
@@ -76,6 +76,7 @@ export default function Slider({
                 Metascore={movie.Metascore}
                 Genre={movie.Genre}
                 score={movie.imdbRating}
+                isLoading={isLoading}
               />
             </SwiperSlide>
           ))}
