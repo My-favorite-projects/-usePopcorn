@@ -8,7 +8,7 @@ export default function GetData(apiCode: string, query: any) {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        setIsLoading(false);
+        setIsLoading(true);
         const res = await fetch(
           `http://www.omdbapi.com/?apikey=${KEY}&${apiCode}=${query}`
         );

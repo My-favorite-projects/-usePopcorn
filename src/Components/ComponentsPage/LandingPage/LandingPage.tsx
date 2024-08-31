@@ -43,7 +43,9 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
             query={query}
             isLoading={searchTimeLoading}
           />
-        ) : null}
+        ) : (
+          []
+        )}
         <TemplateSlider
           titleSec="New Arrival"
           showCard={setCardDetails}
