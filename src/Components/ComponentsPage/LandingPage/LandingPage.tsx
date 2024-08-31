@@ -44,22 +44,24 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
             isLoading={searchTimeLoading}
           />
         ) : (
-          []
+          <>
+            <TemplateSlider
+              titleSec="New Arrival"
+              showCard={setCardDetails}
+              movies={arrivalData ? arrivalData : []}
+              query={query}
+              isLoading={arrivalLoading}
+            />
+            <TemplateSlider
+              titleSec="Funny Movies"
+              showCard={setCardDetails}
+              movies={horrorData ? horrorData : []}
+              query={query}
+              isLoading={horrorLoading}
+            />
+          </>
         )}
-        <TemplateSlider
-          titleSec="New Arrival"
-          showCard={setCardDetails}
-          movies={arrivalData ? arrivalData : []}
-          query={query}
-          isLoading={arrivalLoading}
-        />
-        <TemplateSlider
-          titleSec="Funny Movies"
-          showCard={setCardDetails}
-          movies={horrorData ? horrorData : []}
-          query={query}
-          isLoading={horrorLoading}
-        />
+
         <Footer />
       </Container>
     </>
