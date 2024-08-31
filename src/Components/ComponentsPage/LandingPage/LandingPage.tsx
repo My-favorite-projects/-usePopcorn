@@ -20,7 +20,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
   ); //Destructuring Assignment with Renaming
   const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
     "s",
-    { query }
+    query
   ); //Destructuring Assignment with Renaming
 
   return (

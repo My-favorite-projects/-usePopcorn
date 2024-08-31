@@ -8,7 +8,7 @@ export default function GetData(apiCode: string, query: any) {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        setIsLoading(true);
+        setIsLoading(false);
         const res = await fetch(
           `http://www.omdbapi.com/?apikey=${KEY}&${apiCode}=${query}`
         );
@@ -38,9 +38,7 @@ export default function GetData(apiCode: string, query: any) {
       } catch (error) {
         console.log(error.message);
       } finally {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 3000);
+        setIsLoading(false);
       }
     }
     fetchMovies();
