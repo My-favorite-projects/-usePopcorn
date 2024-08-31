@@ -1,14 +1,25 @@
 import { Box, Typography, Button } from "@mui/material";
 import { SearchBar } from "../../ComponentsElement/SearchBar";
 
-export default function Header({ setIsOpen, showCardDetails, setQuery }: any) {
+export default function Header({
+  setIsOpen,
+  showCardDetails,
+  setQuery,
+  query,
+}: any) {
   return (
     <header
       style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 3 }}
+      className={query.length < 2 ? "" : "bg-secondary "}
     >
       <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">
-          <img src="./public/images/tv.png" alt="Logo" className="mr-2" />
+          <Box
+            component="img"
+            src="./public/images/tv.png"
+            alt="Logo"
+            className="mr-2"
+          />
           <Button onClick={() => showCardDetails(null)}>
             <Typography variant="h4" className="ffb text-light">
               MovieBox

@@ -21,14 +21,14 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
 
   return (
     <>
-      <Box className="w-full">
-        <Header setIsOpen={setIsOpen} setQuery={setQuery} />
+      <Box className={`w-full ${query.length < 2 ? "" : " mt-24"}`}>
+        <Header query={query} setIsOpen={setIsOpen} setQuery={setQuery} />
         <WatchListDrawer
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           movieList={movieList}
         />
-        <SliderHero />
+        {query.length < 2 && <SliderHero />}
       </Box>
       <Container className="min-w-full p-0">
         <TemplateSlider
