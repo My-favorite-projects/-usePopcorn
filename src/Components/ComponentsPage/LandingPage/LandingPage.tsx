@@ -61,7 +61,6 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
             />
           </>
         )}
-
         <Footer />
       </Container>
     </>
