@@ -1,5 +1,6 @@
 import CardMedia from "@mui/material/CardMedia";
 import { Box, Typography, Skeleton } from "@mui/material";
+import NoPhotographyIcon from "@mui/icons-material/NoPhotography";
 import IMDb from "./ScoreMovie";
 
 export default function Card({
@@ -27,12 +28,20 @@ export default function Card({
           width={250}
           height={300}
         />
+      ) : image === "N/A" ? (
+        <Box
+          sx={{ width: 241, height: 345 }}
+          component="div"
+          className="cursor-pointer bg-secondaryLow flex justify-center items-center"
+        >
+          <NoPhotographyIcon />
+        </Box>
       ) : (
         <CardMedia
           component="img"
           height="370"
           image={image}
-          alt="stranger things"
+          alt={title}
           className="cursor-pointer"
         />
       )}
