@@ -15,7 +15,7 @@ export default function Slider({
   movies,
   isLoading,
 }: any) {
-  function asd(e: any) {
+  function setCardData(e: any) {
     let [img, tit, desc] = e.target.parentElement.children;
 
     const infoCard = {
@@ -67,19 +67,21 @@ export default function Slider({
             nextEl: `#swiper-next-${sliderId}`,
           }}
         >
-          {movies.map((movie: any, index: number) => (
-            <SwiperSlide key={movie.imdbID} onClick={asd}>
-              <Card
-                title={movie.Title}
-                year={movie.Year}
-                image={movie.Poster}
-                Metascore={movie.Metascore}
-                Genre={movie.Genre}
-                score={movie.imdbRating}
-                isLoading={isLoading}
-              />
-            </SwiperSlide>
-          ))}
+          <>
+            {movies.map((movie: any) => (
+              <SwiperSlide key={movie.imdbID} onClick={setCardData}>
+                <Card
+                  title={movie.Title}
+                  year={movie.Year}
+                  image={movie.Poster}
+                  Metascore={movie.Metascore}
+                  Genre={movie.Genre}
+                  score={movie.imdbRating}
+                  isLoading={isLoading}
+                />
+              </SwiperSlide>
+            ))}
+          </>
         </Swiper>
       </Box>
     </>
