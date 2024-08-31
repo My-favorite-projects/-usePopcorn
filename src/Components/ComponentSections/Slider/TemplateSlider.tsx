@@ -11,7 +11,7 @@ export default function TemplateSlider({
   return (
     <Box className="w-11/12 m-auto mb-10 relative">
       <Box className="w-full flex py-6 justify-between">
-        <Typography className="ffb" variant="h4">
+        <Typography className="ffb text-primary" variant="h4">
           {titleSec}
         </Typography>
         <Button sx={{ color: "#BE123C", textTransform: "none", gap: 1 }}>

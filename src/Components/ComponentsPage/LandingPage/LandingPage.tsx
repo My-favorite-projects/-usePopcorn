@@ -18,6 +18,10 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
     "s",
     "mask"
   ); //Destructuring Assignment with Renaming
+  const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
+    "s",
+    { query }
+  ); //Destructuring Assignment with Renaming
 
   return (
     <>
@@ -31,6 +35,15 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
         {query.length < 2 && <SliderHero />}
       </Box>
       <Container className="min-w-full p-0">
+        {query.length >= 2 ? (
+          <TemplateSlider
+            titleSec={`Movies related to '${query}'`}
+            showCard={setCardDetails}
+            movies={searchTime}
+            query={query}
+            isLoading={searchTimeLoading}
+          />
+        ) : null}
         <TemplateSlider
           titleSec="New Arrival"
           showCard={setCardDetails}

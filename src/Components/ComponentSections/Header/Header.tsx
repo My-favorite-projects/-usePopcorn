@@ -10,7 +10,7 @@ export default function Header({
   return (
     <header
       style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 3 }}
-      className={query.length < 2 ? "" : "bg-secondary "}
+      className={query < 2 ? "" : "bg-secondary"}
     >
       <Box className="flex justify-between w-11/12 m-auto py-3">
         <Box className="flex items-center">

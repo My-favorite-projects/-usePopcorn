@@ -35,7 +35,7 @@ export default function CardDetails({
   return (
     <>
       <Container
-        className="min-w-full min-h-dvh"
+        className="min-w-full min-h-dvh mt-16 pt-1"
         sx={{
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
