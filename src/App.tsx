@@ -1,18 +1,25 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import LandingPage from "./Components/ComponentsPage/LandingPage/LandingPage";
 import CardDetails from "./Components/ComponentsPage/CardDetails/CardDetails";
 import GetData from "./API/GetData";
 
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState("");
   const [cardDetails, setCardDetails] = useState(null);
   const [movieList, setMovieList] = useState([]);
+
+  const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
+    "s",
+    query
+  ); //Destructuring Assignment with Renaming
   const { dataSearch: arrivalData, isLoading: arrivalLoading } = GetData(
     "s",
     "game"
   ); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData, isLoading: horrorLoading } = GetData(
     "s",
-    "horror"
+    "funny"
   ); //Destructuring Assignment with Renaming
 
   return (
@@ -26,6 +33,12 @@ export default function App() {
         />
       ) : (
         <LandingPage
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          query={query}
+          setQuery={setQuery}
+          searchTime={searchTime}
+          searchTimeLoading={searchTimeLoading}
           arrivalData={arrivalData}
           arrivalLoading={arrivalLoading}
           horrorData={horrorData}

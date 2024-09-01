@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Slider from "./Slider";
 
 export default function TemplateSlider({
-  showCard,
+  setCardDetails,
   titleSec,
   movies,
   isLoading,
@@ -22,7 +22,7 @@ export default function TemplateSlider({
       </Box>
       <Slider
         sliderId={titleSec.length}
-        showCardDetails={showCard}
+        setCardDetails={setCardDetails}
         movies={movies}
         isLoading={isLoading}
       />

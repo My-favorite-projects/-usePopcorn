@@ -13,7 +13,7 @@ export default function CardDetails({
   score = cardDetails.movie.imdbRating * 10,
 }: any) {
   const [isOpen, setIsOpen] = useState(false);
-  const { img, tit, desc } = cardDetails;
+  const { img, tit, desc, imdbID } = cardDetails;
   const [clicked, setClicked] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -41,6 +41,7 @@ export default function CardDetails({
       img: img,
       tit: tit,
       desc: desc,
+      imdbID: imdbID,
       score: ScoreCalculation(),
     };
 
@@ -60,7 +61,7 @@ export default function CardDetails({
       >
         <Header
           setIsOpen={setIsOpen}
-          showCardDetails={setCardDetails}
+          setCardDetails={setCardDetails}
           setQuery={setQuery}
         />
         <WatchListDrawer
@@ -68,14 +69,14 @@ export default function CardDetails({
           setIsOpen={setIsOpen}
           movieList={movieList}
         />
-        <Box className="flex flex-col pl-14 mt-10 w-96">
+        <Box className="flex flex-col pl-14 mt-10">
           <Box className="mb-4">
             <Typography variant="h2" className="text-light ffb">
-              {tit}
+              {desc}
             </Typography>
 
             <Typography variant="body1" className="text-light ffR w-full">
-              {desc}
+              {tit}
             </Typography>
           </Box>
 
@@ -86,7 +87,7 @@ export default function CardDetails({
           <Button
             variant="contained"
             className="hoverBTN"
-            sx={{ background: "#BE123C" }}
+            sx={{ background: "#BE123C", width: 250 }}
             onClick={addCardToWatchList}
           >
             {clicked ? (

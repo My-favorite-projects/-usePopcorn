@@ -11,10 +11,9 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function Slider({
   sliderId,
-  showCardDetails,
+  setCardDetails,
   movies,
   isLoading,
-  setScoreStarNum,
 }: any) {
   function setCardData({ e, movie }: any) {
     let [img, tit, desc] = e.target.parentElement.children;
@@ -26,7 +25,7 @@ export default function Slider({
       movie,
     };
 
-    showCardDetails(infoCard);
+    setCardDetails(infoCard);
   }
 
   return (

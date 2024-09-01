@@ -3,7 +3,7 @@ import { SearchBar } from "../../ComponentsElement/SearchBar";
 
 export default function Header({
   setIsOpen,
-  showCardDetails,
+  setCardDetails,
   setQuery,
   query,
 }: any) {
@@ -20,7 +20,7 @@ export default function Header({
             alt="Logo"
             className="mr-2"
           />
-          <Button onClick={() => showCardDetails(null)}>
+          <Button onClick={() => setCardDetails(null)}>
             <Typography
               variant="h4"
               className={query < 2 ? "text-light ffb" : "text-dark ffb"}

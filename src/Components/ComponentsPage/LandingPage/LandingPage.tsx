@@ -1,13 +1,17 @@
-import { useState } from "react";
 import { Container, Box } from "@mui/material";
 import Header from "../../ComponentSections/Header/Header";
 import Footer from "../../ComponentSections/Footer/Footer";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";
-import GetData from "../../../API/GetData";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
 export default function LandingPage({
+  isOpen,
+  setIsOpen,
+  query,
+  setQuery,
+  searchTime,
+  searchTimeLoading,
   setCardDetails,
   movieList,
   arrivalData,
@@ -15,13 +19,6 @@ export default function LandingPage({
   horrorData,
   horrorLoading,
 }: any) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState("");
-  const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
-    "s",
-    query
-  ); //Destructuring Assignment with Renaming
-
   return (
     <>
       <Box className={`w-full ${query.length < 2 ? "" : " mt-24"}`}>
@@ -37,7 +34,7 @@ export default function LandingPage({
         {query.length >= 2 ? (
           <TemplateSlider
             titleSec={`Movies related to '${query}'`}
-            showCard={setCardDetails}
+            setCardDetails={setCardDetails}
             movies={searchTime ? searchTime : []}
             isLoading={searchTimeLoading}
             colorTit="primary"
@@ -45,17 +42,15 @@ export default function LandingPage({
         ) : null}
         <TemplateSlider
           titleSec="New Arrival"
-          showCard={setCardDetails}
+          setCardDetails={setCardDetails}
           movies={arrivalData ? arrivalData : []}
-          query={query}
           isLoading={arrivalLoading}
           colorTit="dark"
         />
         <TemplateSlider
           titleSec="Funny Movies"
-          showCard={setCardDetails}
+          setCardDetails={setCardDetails}
           movies={horrorData ? horrorData : []}
-          query={query}
           isLoading={horrorLoading}
           colorTit="dark"
         />

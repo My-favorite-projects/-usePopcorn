@@ -9,6 +9,7 @@ import {
   Button,
 } from "@mui/material";
 import StarScore from "./StarScore";
+import { imdbWeb } from "../../constant/constants";
 
 export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
   return (
@@ -53,6 +54,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                       },
                     }}
                     variant="contained"
+                    href={"#"}
                   >
                     Watch Trailer
                   </Button>
