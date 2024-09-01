@@ -56,7 +56,7 @@ export default function Card({
         />
       ) : (
         <Typography sx={{ fontSize: 12, fontWeight: 600 }} variant="h6">
-          {year}
+          {year.length === 5 ? `${year}current` : year}
         </Typography>
       )}
 

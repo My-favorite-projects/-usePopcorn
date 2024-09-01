@@ -12,7 +12,7 @@ export default function App() {
   ); //Destructuring Assignment with Renaming
   const { dataSearch: horrorData, isLoading: horrorLoading } = GetData(
     "s",
-    "mask"
+    "horror"
   ); //Destructuring Assignment with Renaming
 
   return (
