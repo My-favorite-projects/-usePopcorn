@@ -12,6 +12,7 @@ import StarScore from "./StarScore";
 import { imdbWeb } from "../../constant/constants";
 
 export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
+  console.log(movieList);
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
       <List className="flex-col" sx={{ width: 600, gap: 1 }}>
@@ -33,7 +34,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                       sx={{ fontWeight: 600, fontSize: 18 }}
                       variant="h6"
                     >
-                      {detail.desc}
+                      {detail.tit}
                     </Typography>
                     {/* for title */}
                     <Typography
@@ -41,7 +42,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                       sx={{ fontWeight: 400, fontSize: 14 }}
                       variant="h6"
                     >
-                      {detail.tit}
+                      {detail.desc}
                     </Typography>
                   </Box>
                 </Box>
@@ -54,7 +55,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
                       },
                     }}
                     variant="contained"
-                    href={"#"}
+                    href={imdbWeb + detail.imdbID}
                   >
                     Watch Trailer
                   </Button>

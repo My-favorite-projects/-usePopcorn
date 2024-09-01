@@ -16,18 +16,16 @@ export default function Slider({
   isLoading,
 }: any) {
   function setCardData({ e, movie }: any) {
-    let [img, tit, desc] = e.target.parentElement.children;
-
     const infoCard = {
-      img: img.src,
-      tit: tit.textContent,
-      desc: desc.textContent,
+      img: movie.Poster,
+      tit: movie.Title,
+      desc: movie.Year,
+      imdbID: movie.imdbID,
       movie,
     };
 
     setCardDetails(infoCard);
   }
-
   return (
     <>
       <Box className={`w-11/12 m-auto mb-10 relative`}>
@@ -72,12 +70,13 @@ export default function Slider({
             {movies.map((movie: any) => (
               <SwiperSlide
                 key={movie.imdbID}
-                onClick={(e) => setCardData({ movie, e })}
+                onClick={(e) => setCardData({ e, movie })}
               >
                 <Card
                   title={movie.Title}
                   year={movie.Year}
                   image={movie.Poster}
+                  imdbID={movie.imdbID}
                   Metascore={movie.Metascore}
                   Genre={movie.Genre}
                   score={movie.imdbRating}

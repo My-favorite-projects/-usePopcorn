@@ -27,6 +27,7 @@ export default function LandingPage({
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           movieList={movieList}
+          movies={searchTime ? searchTime : []}
         />
         {query.length < 2 && <SliderHero />}
       </Box>
