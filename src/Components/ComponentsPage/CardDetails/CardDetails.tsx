@@ -34,6 +34,14 @@ export default function CardDetails({
   }
 
   function addCardToWatchList() {
+    const isAlreadyInList = movieList.some(
+      (movie: any) => movie.imdbID === imdbID
+    );
+
+    if (isAlreadyInList) {
+      alert("This movie is already in your watchlist.");
+      return;
+    }
     if (clicked) {
       return;
     }
@@ -44,7 +52,6 @@ export default function CardDetails({
       imdbID: imdbID,
       score: ScoreCalculation(),
     };
-
     setMovieList([...movieList, info]);
     setClicked(true);
   }
