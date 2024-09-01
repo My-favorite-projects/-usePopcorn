@@ -7,17 +7,16 @@ import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";
 import GetData from "../../../API/GetData";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
 
-export default function LandingPage({ setCardDetails, movieList }: any) {
+export default function LandingPage({
+  setCardDetails,
+  movieList,
+  arrivalData,
+  arrivalLoading,
+  horrorData,
+  horrorLoading,
+}: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const { dataSearch: arrivalData, isLoading: arrivalLoading } = GetData(
-    "s",
-    "game"
-  ); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData, isLoading: horrorLoading } = GetData(
-    "s",
-    "mask"
-  ); //Destructuring Assignment with Renaming
   const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
     "s",
     query
