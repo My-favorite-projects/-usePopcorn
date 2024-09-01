@@ -93,7 +93,7 @@ export default function CardDetails({
             {clicked ? (
               <Link
                 className="ffb"
-                href={imdbWeb}
+                href={imdbWeb + imdbID}
                 underline="none"
                 variant="h6"
                 sx={{ color: "#fff" }}
