@@ -39,7 +39,6 @@ export default function CardDetails({
     );
 
     if (isAlreadyInList) {
-      alert("This movie is already in your watchlist.");
       return;
     }
     if (clicked) {
