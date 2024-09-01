@@ -23,8 +23,6 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
     query
   ); //Destructuring Assignment with Renaming
 
-  console.log(query);
-
   return (
     <>
       <Box className={`w-full ${query.length < 2 ? "" : " mt-24"}`}>

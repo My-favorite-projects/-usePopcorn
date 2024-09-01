@@ -9,13 +9,30 @@ export default function CardDetails({
   setCardDetails,
   cardDetails,
   setMovieList,
-  score = 3,
   movieList,
+  score = cardDetails.movie.imdbRating * 10,
 }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const { img, tit, desc } = cardDetails;
   const [clicked, setClicked] = useState(false);
   const [query, setQuery] = useState("");
+
+  function ScoreCalculation() {
+    let info = 0;
+    if (score < 20) {
+      info = 1;
+    } else if (score < 40) {
+      info = 2;
+    } else if (score < 60) {
+      info = 3;
+    } else if (score < 80) {
+      info = 4;
+    } else {
+      info = 5;
+    }
+    return info;
+  }
+  console.log(ScoreCalculation());
 
   function addCardToWatchList() {
     if (clicked) {
@@ -25,7 +42,7 @@ export default function CardDetails({
       img: img,
       tit: tit,
       desc: desc,
-      score: score,
+      score: ScoreCalculation(),
     };
 
     setMovieList([...movieList, info]);
@@ -64,7 +81,7 @@ export default function CardDetails({
           </Box>
 
           <Box className="mb-4">
-            <StarScore lengthStar={score} />
+            <StarScore lengthStar={ScoreCalculation()} />
           </Box>
 
           <Button
