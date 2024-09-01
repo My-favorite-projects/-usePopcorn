@@ -32,7 +32,6 @@ export default function CardDetails({
     }
     return info;
   }
-  console.log(ScoreCalculation());
 
   function addCardToWatchList() {
     if (clicked) {
