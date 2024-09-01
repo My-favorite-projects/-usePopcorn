@@ -23,6 +23,8 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
     query
   ); //Destructuring Assignment with Renaming
 
+  console.log(query);
+
   return (
     <>
       <Box className={`w-full ${query.length < 2 ? "" : " mt-24"}`}>
@@ -41,6 +43,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
             showCard={setCardDetails}
             movies={searchTime ? searchTime : []}
             isLoading={searchTimeLoading}
+            colorTit="primary"
           />
         ) : null}
         <TemplateSlider
@@ -49,6 +52,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           movies={arrivalData ? arrivalData : []}
           query={query}
           isLoading={arrivalLoading}
+          colorTit="dark"
         />
         <TemplateSlider
           titleSec="Funny Movies"
@@ -56,6 +60,7 @@ export default function LandingPage({ setCardDetails, movieList }: any) {
           movies={horrorData ? horrorData : []}
           query={query}
           isLoading={horrorLoading}
+          colorTit="dark"
         />
 
         <Footer />
