@@ -12,7 +12,6 @@ import StarScore from "./StarScore";
 import { imdbWeb } from "../../constant/constants";
 
 export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
-  console.log(movieList);
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
       <List className="flex-col" sx={{ width: 600, gap: 1 }}>
