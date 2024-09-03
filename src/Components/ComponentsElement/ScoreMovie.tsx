@@ -8,7 +8,7 @@ export default function IMDb({
   score,
 }: any) {
   return (
-    <Box className="flex justify-between w-full">
+    <Box className="flex flex-wrap justify-between w-full">
       <Box className="flex justify-between items-center gap-2">
         <Box sx={{ background: "#E6B91E" }} className="rounded">
           <Typography
@@ -21,7 +21,10 @@ export default function IMDb({
         </Box>
 
         <Box>
-          <Typography className={`text-${colorScore} ffr`}>
+          <Typography
+            sx={{ fontSize: "2vh" }}
+            className={`text-${colorScore} ffr`}
+          >
             {score * 10} / 100
           </Typography>
         </Box>
@@ -29,10 +32,10 @@ export default function IMDb({
       {percentage === "N/A" ? (
         ""
       ) : (
-        <Box className="flex  justify-between items-center  w-16">
+        <Box className="flex justify-between items-center">
           <img src="./public/images/tomato.svg" alt="tomato" />
 
-          <Typography className={`text-${colorScore}`} variant="h6">
+          <Typography className={`text-${colorScore} meta-score`} variant="h6">
             {percentage}%
           </Typography>
         </Box>

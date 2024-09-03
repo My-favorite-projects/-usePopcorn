@@ -14,11 +14,11 @@ import { imdbWeb } from "../../constant/constants";
 export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
   return (
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
-      <List className="flex-col" sx={{ width: 600, gap: 1 }}>
+      <List className="flex-col" sx={{ width: "50vw", gap: 1 }}>
         {movieList?.length > 0 ? (
           movieList.map((detail: any) => (
             <ListItem key={detail} className="flex justify-between w-full">
-              <Box className="flex w-full justify-between">
+              <Box className="flex w-full justify-between drawer-card">
                 <Box className="flex gap-3">
                   <CardMedia
                     sx={{ width: 50 }}

@@ -70,7 +70,7 @@ export default function Card({
         />
       ) : (
         <Typography
-          className="text-dark"
+          className="text-dark title-card"
           sx={{ fontSize: 18, fontWeight: 600 }}
           variant="h5"
         >
@@ -105,7 +105,11 @@ export default function Card({
           className="my-1"
         />
       ) : (
-        <Typography variant="h6" sx={{ fontSize: 12, fontWeight: 600 }}>
+        <Typography
+          className="genre-card"
+          variant="h6"
+          sx={{ fontSize: 12, fontWeight: 600 }}
+        >
           {Genre}
         </Typography>
       )}

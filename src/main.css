@@ -44,3 +44,55 @@ img {
 .left-prev {
   left: -53px;
 }
+
+@media screen and (max-width: 650px) {
+  /* header */
+  .logo-title {
+    display: none !important;
+  }
+  .logo-icon {
+    width: 30px;
+  }
+  .watch-btn {
+    display: none;
+  }
+  .watch-bumberger {
+    display: block;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  /* header */
+  /* hero */
+  .box-film {
+    display: none;
+  }
+  /* hero */
+  .title-card {
+    font-size: 0.7rem !important;
+  }
+  .genre-card {
+    font-size: 0.6rem !important;
+  }
+  .meta-score {
+    font-size: 12px !important;
+  }
+  .drawer-card {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .title-sec {
+    font-size: 20px !important;
+  }
+  .see-more {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .watch-bumberger {
+    display: none;
+  }
+}

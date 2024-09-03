@@ -12,7 +12,7 @@ export default function Hero({ desc, img, title, href, rating }: any) {
         height: "42vw",
       }}
     >
-      <Box className="w-4/12">
+      <Box className="w-4/12 box-film">
         <Box className="pb-4">
           <Typography variant="h3" className="ffb text-light">
             {title}

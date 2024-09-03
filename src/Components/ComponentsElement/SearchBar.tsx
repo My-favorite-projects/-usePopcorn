@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export function SearchBar({ query, setQuery }: any) {
   return (
-    <Box className="border-2 rounded-md w-2/5 flex items-center">
+    <Box className="border-2 rounded-md w-2/5 flex items-center search-bar">
       <InputBase
         sx={
           query < 2

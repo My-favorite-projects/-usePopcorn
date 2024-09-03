@@ -7,7 +7,7 @@ import SliderHero from "../../ComponentSections/Hero/SliderHero";
 import { context } from "../../../API/context";
 import { useContext } from "react";
 
-export default function LandingPage({}: any) {
+export default function LandingPage() {
   const {
     isOpen,
     setIsOpen,

@@ -1,5 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 import { SearchBar } from "../../ComponentsElement/SearchBar";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header({
   setIsOpen,
@@ -12,18 +13,22 @@ export default function Header({
       style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 3 }}
       className={query < 2 ? "" : "bg-light"}
     >
-      <Box className="flex justify-between w-11/12 m-auto py-3">
-        <Box className="flex items-center">
+      <Box className="flex justify-between w-11/12 m-auto py-3 cursor-pointer">
+        <Box className="flex items-center" onClick={() => setCardDetails(null)}>
           <Box
             component="img"
             src="./public/images/tv.png"
             alt="Logo"
-            className="mr-2"
+            className="mr-2 logo-icon"
           />
-          <Button onClick={() => setCardDetails(null)}>
+          <Button>
             <Typography
               variant="h4"
-              className={query < 2 ? "text-light ffb" : "text-dark ffb"}
+              className={
+                query < 2
+                  ? "text-light ffb logo-title"
+                  : "text-dark ffb logo-title"
+              }
             >
               MovieBox
             </Typography>
@@ -32,7 +37,7 @@ export default function Header({
 
         <SearchBar setQuery={setQuery} query={query} />
 
-        <Box className="flex items-center">
+        <Box className="flex items-center watch-btn">
           <Button
             variant="text"
             size="small"
@@ -50,6 +55,13 @@ export default function Header({
               Watch List
             </Typography>
           </Button>
+        </Box>
+
+        <Box
+          onClick={() => setIsOpen(true)}
+          className="watch-bumberger text-secondary px-4 mt-2 cursor-pointer"
+        >
+          <MenuIcon />
         </Box>
       </Box>
     </header>
