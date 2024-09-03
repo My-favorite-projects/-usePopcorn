@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 import GetData from "./GetData";
 
-export const context = createContext(null);
+export const context = createContext();
 
-function ContextApi({ children }: any) {
+export default function ContextApi({ children }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [cardDetails, setCardDetails] = useState(null);

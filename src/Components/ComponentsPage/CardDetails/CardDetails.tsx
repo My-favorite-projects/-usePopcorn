@@ -38,12 +38,10 @@ export default function CardDetails({
       (movie: any) => movie.imdbID === imdbID
     );
 
-    if (isAlreadyInList) {
+    if (isAlreadyInList || clicked) {
       return;
     }
-    if (clicked) {
-      return;
-    }
+
     const info = {
       img: img,
       tit: tit,

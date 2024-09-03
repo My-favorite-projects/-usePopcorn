@@ -4,21 +4,25 @@ import Footer from "../../ComponentSections/Footer/Footer";
 import WatchListDrawer from "../../ComponentsElement/WatchList";
 import TemplateSlider from "../../ComponentSections/Slider/TemplateSlider";
 import SliderHero from "../../ComponentSections/Hero/SliderHero";
+import { context } from "../../../API/context";
+import { useContext } from "react";
 
-export default function LandingPage({
-  isOpen,
-  setIsOpen,
-  query,
-  setQuery,
-  searchTime,
-  searchTimeLoading,
-  setCardDetails,
-  movieList,
-  arrivalData,
-  arrivalLoading,
-  horrorData,
-  horrorLoading,
-}: any) {
+export default function LandingPage({}: any) {
+  const {
+    isOpen,
+    setIsOpen,
+    query,
+    setQuery,
+    searchTime,
+    searchTimeLoading,
+    setCardDetails,
+    movieList,
+    arrivalData,
+    arrivalLoading,
+    horrorData,
+    horrorLoading,
+  } = useContext(context);
+
   return (
     <>
       <Box className={`w-full ${query.length < 2 ? "" : " mt-24"}`}>
@@ -27,7 +31,6 @@ export default function LandingPage({
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           movieList={movieList}
-          movies={searchTime ? searchTime : []}
         />
         {query.length < 2 && <SliderHero />}
       </Box>

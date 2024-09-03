@@ -9,8 +9,8 @@ export default function Card({
   image,
   Metascore,
   Genre,
-  score,
   isLoading,
+  score,
 }: any) {
   return (
     <Box

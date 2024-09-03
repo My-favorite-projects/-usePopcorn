@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import Card from "../../ComponentsElement/Card";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -11,9 +10,9 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function Slider({
   sliderId,
-  setCardDetails,
-  movies,
   isLoading,
+  movies,
+  setCardDetails,
 }: any) {
   function setCardData({ e, movie }: any) {
     const infoCard = {

@@ -1,26 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import LandingPage from "./Components/ComponentsPage/LandingPage/LandingPage";
 import CardDetails from "./Components/ComponentsPage/CardDetails/CardDetails";
-import GetData from "./API/GetData";
+import { context } from "./API/context";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState("");
-  const [cardDetails, setCardDetails] = useState(null);
-  const [movieList, setMovieList] = useState([]);
-
-  const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
-    "s",
-    query
-  ); //Destructuring Assignment with Renaming
-  const { dataSearch: arrivalData, isLoading: arrivalLoading } = GetData(
-    "s",
-    "game"
-  ); //Destructuring Assignment with Renaming
-  const { dataSearch: horrorData, isLoading: horrorLoading } = GetData(
-    "s",
-    "funny"
-  ); //Destructuring Assignment with Renaming
+  const { cardDetails, setCardDetails, movieList, setMovieList } =
+    useContext(context);
 
   return (
     <>
@@ -32,20 +17,7 @@ export default function App() {
           movieList={movieList}
         />
       ) : (
-        <LandingPage
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          query={query}
-          setQuery={setQuery}
-          searchTime={searchTime}
-          searchTimeLoading={searchTimeLoading}
-          arrivalData={arrivalData}
-          arrivalLoading={arrivalLoading}
-          horrorData={horrorData}
-          horrorLoading={horrorLoading}
-          setCardDetails={setCardDetails}
-          movieList={movieList}
-        />
+        <LandingPage />
       )}
     </>
   );
