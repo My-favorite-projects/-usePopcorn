@@ -1,4 +1,4 @@
-import { KEY } from "../constant/constants";
+import { KEY, apiUrl } from "../constant/constants";
 import { useState, useEffect } from "react";
 
 export default function GetData(apiCode: string, query: any) {
@@ -9,9 +9,7 @@ export default function GetData(apiCode: string, query: any) {
     async function fetchMovies() {
       try {
         setIsLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&${apiCode}=${query}`
-        );
+        const res = await fetch(`${apiUrl}?apikey=${KEY}&${apiCode}=${query}`);
 
         if (!res.ok)
           throw new Error("Something went wrong with fetching movies!");
