@@ -17,7 +17,7 @@ export default function Header({
         <Box className="flex items-center" onClick={() => setCardDetails(null)}>
           <Box
             component="img"
-            src="./public/images/tv.png"
+            src="./images/tv.png"
             alt="Logo"
             className="mr-2 logo-icon"
           />

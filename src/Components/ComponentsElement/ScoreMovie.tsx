@@ -33,7 +33,7 @@ export default function IMDb({
         ""
       ) : (
         <Box className="flex justify-between items-center">
-          <img src="./public/images/tomato.svg" alt="tomato" />
+          <img src="./images/tomato.svg" alt="tomato" />
 
           <Typography className={`text-${colorScore} meta-score`} variant="h6">
             {percentage}%
