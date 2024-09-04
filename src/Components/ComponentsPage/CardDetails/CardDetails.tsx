@@ -33,7 +33,7 @@ export default function CardDetails({
     return info;
   }
 
-  function addCardToWatchList() {
+  function handleAddCardToWatchList() {
     const isAlreadyInList = movieList.some(
       (movie: any) => movie.imdbID === imdbID
     );
@@ -50,6 +50,8 @@ export default function CardDetails({
       score: ScoreCalculation(),
     };
     setMovieList([...movieList, info]);
+
+    localStorage.setItem("movieList", JSON.stringify([...movieList, info]));
     setClicked(true);
   }
 
@@ -92,7 +94,7 @@ export default function CardDetails({
             variant="contained"
             className="hoverBTN"
             sx={{ background: "#BE123C", width: 250 }}
-            onClick={addCardToWatchList}
+            onClick={handleAddCardToWatchList}
           >
             {clicked ? (
               <Link

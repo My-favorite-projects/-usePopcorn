@@ -7,7 +7,10 @@ export default function ContextApi({ children }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [cardDetails, setCardDetails] = useState(null);
-  const [movieList, setMovieList] = useState([]);
+  const [movieList, setMovieList] = useState(function () {
+    const storageVarable = localStorage.getItem("movieList");
+    return JSON.parse([storageVarable]);
+  });
 
   const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(
     "s",
