@@ -9,6 +9,5 @@ createRoot(document.getElementById("root")!).render(
     <ContextApi>
       <App />
     </ContextApi>
-    ,
   </StrictMode>
 );

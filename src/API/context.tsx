@@ -9,7 +9,10 @@ export default function ContextApi({ children }: any) {
   const [cardDetails, setCardDetails] = useState(null);
   const [movieList, setMovieList] = useState(function () {
     const storageVarable = localStorage.getItem("movieList");
-    return JSON.parse([storageVarable]);
+    // return JSON.parse(storageVarable) ?? [];
+    return storageVarable == null || undefined
+      ? []
+      : JSON.parse(storageVarable);
   });
 
   const { dataSearch: searchTime, isLoading: searchTimeLoading } = GetData(

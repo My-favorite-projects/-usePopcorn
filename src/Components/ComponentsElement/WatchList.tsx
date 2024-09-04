@@ -17,7 +17,7 @@ export default function WatchListDrawer({ isOpen, setIsOpen, movieList }: any) {
       <List className="flex-col" sx={{ width: "50vw", gap: 1 }}>
         {movieList?.length > 0 ? (
           movieList.map((detail: any) => (
-            <ListItem key={detail} className="flex justify-between w-full">
+            <ListItem key={detail.img} className="flex justify-between w-full">
               <Box className="flex w-full justify-between drawer-card">
                 <Box className="flex gap-3">
                   <CardMedia

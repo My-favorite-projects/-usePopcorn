@@ -21,7 +21,7 @@ export default function LandingPage() {
     arrivalLoading,
     horrorData,
     horrorLoading,
-  } = useContext(context);
+  } = useContext<any>(context);
 
   return (
     <>
