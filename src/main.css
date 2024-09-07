@@ -17,6 +17,10 @@
   src: url("./fonts/DMSans-Regular.ttf");
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
 .ffb {
   font-family: fontFamilyBold !important;
 }
